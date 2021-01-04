@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex22_html5.html -->
+
+    <h1>Form 태그 관련</h1>
+
+    <form method="POST" action="ex22_ok.jsp">
+
+        <h2>라벨 + 안내메세지</h2>
+
+        <div>
+            이름 : <input type="text">
+        </div>
+
+        <div>
+            <label for="txt1">이름:</label> <input type="test" id="txt1">
+        </div>
+
+        <div>
+            <input type="text" value="이름을 입력하세요." onfocus="this.value='';">
+        </div>
+
+        <div>
+            <input type="password" value="암호를 입력하세요.">
+        </div>
+
+        <div>
+            <input type="text" placeholder="이름을 입력하세요." >
+        </div>
+
+        <div>
+            <input type="password" placeholder="암호를 입력하세요." >
+        </div>
+
+        <div>
+            <textarea cols="50" rows="5" placeholder="자기소개를 입력하세요."></textarea>
+        </div>
+
+        <hr>
+
+        <h2>입력값 체크(유효성 검사 - 필수 입력값) - required </h2>
+
+        <h3>로그인</h3>
+        <div><input type="text" placeholder="아이디" required value="1"></div>
+        <div><input type="password" placeholder="암호" required value="1"></div>
+        <div><input type="submit" value="로그인"></div>
+
+        <hr>
+
+        <h2>의미가 강조된 태그들 > Sementic Web (시멘틱 웹) </h2>
+
+        <!-- 
+            <div>메뉴</div>
+            <ul>메뉴</ul>
+            <nav>메뉴</nav> ( 구조가 곧 의미와 연관된 태그 -> 시멘틱 웹 )
+        -->
+
+        URL : <input type="text">
+        <br>
+        URL : <input type="url">
+        
+        <hr>
+
+        Email : <input type="email">
+
+        <hr>
+
+        <!-- 숫자로 입력받을 땐 되도록이면 number control을 사용할 것 -->
+        숫자 : <input type="number" min="0" max="100" step="10">
+
+        <hr>
+
+        범위 : <input type="range" min="20" max="80" onchange="document.getElementById('rtxt').value = this.value;">
+        <input type="text" id="rtxt">
+
+        <hr>
+
+        색상 : <input type="color" onchange="document.getElementById('ctxt').value = this.value; document.body.bgColor = this.value;">
+        <input type="text" id="ctxt">
+
+        <hr>
+
+        날짜 시간 : 
+        <input type="date">
+        <br>
+        <input type="month">
+        <br>
+        <input type="week">
+        <br>
+        <input type="time">
+        <br>
+        <input type="datetime"> <!-- 지원하는 브라우저가 전무함, 문법에만 존재하는 것 -->
+        <br>
+        <input type="datetime-local">
+
+        <hr>
+
+        <h2>목록</h2>
+
+        사원명 :
+        <select>
+            <option>직접 입력</option>
+            <option>홍길동</option>
+            <option>아무개</option>
+            <option>하하하</option>
+        </select>
+        <input type="text" size="3">
+
+        <hr>
+
+        <!-- 선택과 입력을 하나의 텍스트박스로 할 수 있음 -->
+        사원명 : <input type="text" size="5" list="datalist1"> 
+
+        <datalist id="datalist1">
+            <option value="홍길동"></option>
+            <option value="아무개"></option>
+            <option value="하하하"></option>
+        </datalist>
+
+        <hr>
+
+        <h2>진행률</h2>
+
+        <progress></progress><br>
+        <progress value="0"></progress><br>
+        <progress value="0.5"></progress><br>
+        <progress value="1"></progress><br>
+        <progress max="100" value="85"></progress><br>
+
+        <h2>수치</h2>
+
+        <meter></meter><br>
+        <meter value="0"></meter><br>
+        <meter value="0.5"></meter><br>
+        <meter value="1"></meter><br>
+        <meter min="-100" max="100" value="10"></meter><br>
+
+        <meter min="0" max="100" value="20" low="30" high="80"></meter><br>
+        <meter min="0" max="100" value="70" low="30" high="80"></meter><br>
+        <meter min="0" max="100" value="90" low="30" high="80"></meter><br>
+
+        <hr>
+
+        <details>
+            <summary>JavaScript?</summary>
+            <p>자바 스크립트는 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸 어쩌구 저쩌꾸</p>
+        </details>
+
+        <hr>
+
+        <!-- form 태그 내부 영역 표시 -->
+        <fieldset>
+            <legend>로그인</legend>
+            <div>아이디 : <input type="text" size="5"></div>
+            <div>암호 : <input type="text" size="5"></div>
+        </fieldset>
+
+        <hr>
+
+        <marquee scrollamount="50" behavior="slide">이게 뭔가요... </marquee>
+
+
+        <hr>
+        <input type="submit" value="보내기">
+
+    </form>
+</body>
+</html>
