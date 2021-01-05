@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex11_emment.html -->
+
+    <!-- 
+
+        Emmet, Zen-Coding
+        - 편집기가 제공하는 확장 기능 중 하나
+        - CSS 선택자를 사용해서 HTML/CSS 코드를 빠르게 작성하는 기능
+        - http://emmet.io
+
+     -->
+
+     <h1>태그 선택자</h1>
+
+     div
+     p
+     span
+     a
+     
+     <img src="/images/dog01.jpg" alt="강아지">
+
+     <input type="checkbox">
+
+
+     <h1>id 선택자</h1>
+
+     div#box1
+     <div id="box1"></div>
+
+     input#txtName
+     <input type="text" id="txtName">   
+
+     h1#title
+     <h1 id="title">제목입니다.</h1>
+
+     #one
+     <div id="one"></div>
+     <!-- 태그이름이 안적혀 있을 땐 무조건 div태그로 만들어진다. -->
+     <? id="one"></?>
+
+
+     <h1>class 선택자</h1>
+
+     div.item
+     <div class="item"></div>
+
+     img.pet
+     <img src="/images/cat01.jpg" alt="고양이" class="pet">
+
+     input#txtName.txt.red
+     <input type="text" id="txtName" class="txt red">
+
+
+     <h1>속성 선택자</h1>
+    
+     div[title] {  }
+
+     <div>A</div>
+     <div title="상자">B</div>
+     
+     <div title="상자">C</div>
+
+     div[title=상자]
+     div[title='상자']
+     div[title="상자"]
+     <div title="상자"></div>
+
+     img
+     img[width height]
+     <img src="/images/dog01.jpg" alt="강아지" width="200" height="100">
+
+
+     <h1>PCDATA</h1>
+
+     div{상자}
+     <div>상자</div>
+
+     <div>상자</div>
+
+     h1{제목입니다.}
+     <h1>제목입니다.</h1>
+
+     div#box1.box[title=상자]{상자입니다.}
+     <div id="box1" class="box" title="상자">상자입니다.</div>
+
+     &amp;lt;
+
+
+</body>
+</html>
