@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    
+    <style>
+
+        body {
+            background-color: rgb(42, 47, 61);
+        }
+
+        h1 {
+            font-style: italic;
+            color: whitesmoke;
+            font-family: 'Do Hyeon', sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        #snowman {
+            text-align: center;
+            padding: 50px;
+        }
+
+        #letter {
+            text-align: center;
+            font-family: 'East Sea Dokdo', cursive;
+            color: #ddd;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>눈사람을 만들고 싶지만 못 만드니까</h1>
+
+    <div id="snowman">
+        <img src="../images/Snow.png" alt="" width="400">
+    </div>
+
+    <div id="letter">
+        나는 이런것도 만들 줄 안다고 ㅋ<br>
+        어때 멋있니?<br>
+        눈오는데 눈사람 만들기~<br>
+    </div>
+</body>
+<script src='https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js'></script>
+<script>
+    var sf = new Snowflakes({
+        color: "#ffffff", // 색상
+        count: 75, // 갯수
+        minOpacity: 0.2, // 최소 투명도 0: 투명 | 1: 불투명
+        maxOpacity: 0.6 // 최대 투명도
+    });
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #num2, #num41, #num42 {
+            /* border: 1px solid black; */
+            width: 300px;
+            height: 400px;
+        }
+
+        #num2 header {
+            width: 100px;
+            height: 400px;
+            background-color: tomato;
+            float: left;
+        }
+
+        #num2 section {
+            background-color: rgb(255, 246, 116);
+            width: 200px;
+            height: 400px;
+            float: left;
+        }
+
+        #num41 header {
+            background-color: tomato;
+            height: 100px;
+        }
+
+        #num41 #sec1 {
+            background-color: rgb(255, 246, 116);
+            width: 100px;
+            height: 300px;
+            float: left;
+        }
+
+        #num41 #sec2 {
+            background-color: yellowgreen;
+            width: 100px;
+            height: 300px;
+            float: left;
+        }
+
+        #num41 #sec3 {
+            background-color: pink;
+            width: 100px;
+            height: 300px;
+            float: left;
+        }
+
+        #num42 header {
+            background-color: tomato;
+            height: 100px;
+        }
+
+        #num42 nav {
+            background-color: skyblue;
+            width: 100px;
+            height: 300px;
+            float: left;
+        }
+
+        #num42 #sec4 {
+            background-color: rgb(255, 246, 116);
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        #num42 footer {
+            background-color: yellowgreen;
+            height: 100px;
+            width: 200px;
+            float: right;
+            /* clear: both; */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex29.html -->
+
+    <h1>2단 구조</h1>
+
+    <main id="num2">
+        <header></header>
+        <section></section>
+    </main>
+    
+    <h1>4단 구조1</h1>
+    
+    <main id="num41">
+        <header></header>
+        <section id="sec1"></section>
+        <section id="sec2"></section>
+        <section id="sec3"></section>
+    </main>
+
+    <h1>4단 구조2</h1>
+
+    <main id="num42">
+        <header></header>
+        <nav></nav>
+        <section>
+            <section id="sec4"></section>
+            <footer></footer>
+        </section>
+    </main>
+
+</body>
+</html>

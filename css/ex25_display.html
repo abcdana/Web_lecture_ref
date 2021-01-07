@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+        display 속성
+        - 요소가 화면에 출력되는 방식을 지정
+
+         */
+
+        .box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: inline;  /* 해당 요소를 inline처럼 출력해라 */
+        }
+
+        .link {
+            border: 1px solid black;
+            display: block;   /* 해당 요소를 block처럼 출력해라 */
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #menu ul {
+            border: 1px solid red;
+            padding: 0;
+        }
+
+        #menu li {
+            border: 1px solid blue;
+            /* display: inline; */
+            display: inline-block;
+            /* inline-block: inline 태그인데 크기 조절이 가능한 출력 */
+            width: 19%;
+        }
+
+        .cat {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex25_display.html -->
+
+    <nav id="menu">
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+        </ul>
+    </nav>
+
+    <h1>블럭태그</h1>
+    <!-- div#box$.box{상자$}*3 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+
+    <h1>인라인태그</h1>
+    <!-- a[href=#]#link$.link{링크$}*3 -->
+    <a href="#" id="link1" class="link">링크1</a>
+    <a href="#" id="link2" class="link">링크2</a>
+    <a href="#" id="link3" class="link">링크3</a>
+
+    <h1>고양이</h1>
+
+    <img src="../images/cat01.jpg" alt="" class="cat">
+    <img src="../images/cat02.jpg" alt="" class="cat">
+    <img src="../images/cat03.jpg" alt="" class="cat">
+    <img src="../images/cat04.jpg" alt="" class="cat">
+    <img src="../images/cat05.jpg" alt="" class="cat">
+    <img src="../images/cat01.jpg" alt="" class="cat">
+    <img src="../images/cat02.jpg" alt="" class="cat">
+    <img src="../images/cat03.jpg" alt="" class="cat">
+    <img src="../images/cat04.jpg" alt="" class="cat">
+    <img src="../images/cat05.jpg" alt="" class="cat">
+    <img src="../images/cat01.jpg" alt="" class="cat">
+    <img src="../images/cat02.jpg" alt="" class="cat">
+    <img src="../images/cat03.jpg" alt="" class="cat">
+    <img src="../images/cat04.jpg" alt="" class="cat">
+    <img src="../images/cat05.jpg" alt="" class="cat">
+    <img src="../images/cat01.jpg" alt="" class="cat">
+    <img src="../images/cat02.jpg" alt="" class="cat">
+    <img src="../images/cat03.jpg" alt="" class="cat">
+    <img src="../images/cat04.jpg" alt="" class="cat">
+    <img src="../images/cat05.jpg" alt="" class="cat">
+</body>
+</html>
