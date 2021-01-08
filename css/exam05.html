@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin-bottom: 200px;
+        }
+
+        body, h1, th, td, div, span {
+            font-family: Verdana;
+            color: #444;
+        }
+
+        main {
+            width: 800px;
+            margin: 0px auto;
+        }
+
+        h1 {
+            border-bottom: 1px dashed #999;
+            font-variant: small-caps;
+        }
+
+        .tbl, .tbl th, .tbl tr, .tbl td {
+            border: 1px solid #CCC;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 14px;
+            padding: 5px 15px 5px 15px;
+        }
+
+        .tbl .cell5 {
+            text-align: left;
+            text-indent: -5px;
+        }
+
+        .tbl th {
+            background-color: #DDD;
+            font-size: 14px;
+        }
+        
+        
+        #s1 {
+            color: #6495ED;
+        }
+
+
+        /* table 2 */
+
+        #s2 {
+            color: #FFD700;
+        }
+
+        #tbl2  .grey {
+            background-color: #EEE;
+        }
+
+        /* table 3 */
+
+        #s3 {
+            color: #C3E871;
+        }
+
+        #tbl3 tr:hover {
+            background-color: #EEE;
+        }
+
+        /* table 4 */
+
+        #s4 {
+            color: #C792EA;
+        }
+
+        #tbl4 td, #tbl4 th{
+            border: none;
+        }
+
+        /* table 4 */
+
+        #s5 {
+            color: #73B5AF;
+        }
+
+        #tbl5 {
+            border-collapse: separate;
+            border: none;
+            margin-left: -15px;
+            margin-top: -5px;
+        }
+
+        #tbl5 td, #tbl5 th {
+            border-right: none;
+        }
+
+        #tbl5 .cell5, #tbl5 .col5 {
+            border-right: 1px solid #CCC;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- exam05 -->
+
+    <main>
+
+        <h1><span id="s1">M</span>ember list</h1>
+
+        <table id="tbl1" class="tbl">
+            <tr>
+                <th class="col1">No</th>
+                <th class="col2">Name</th>
+                <th class="col3">Age</th>
+                <th class="col4">ID</th>
+                <th class="col5">Description</th>
+            </tr>
+
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem.</td>
+                <td class="cell3">01</td>
+                <td class="cell4">Lorem.</td>
+                <td class="cell5">Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+                <td class="cell1">02</td>
+                <td class="cell2">Itaque.</td>
+                <td class="cell3">02</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Exercitationem nam architecto explicabo quae!</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Error.</td>
+                <td class="cell3">03</td>
+                <td class="cell4">Et?</td>
+                <td class="cell5">Enim ratione officiis consequuntur expedita?</td>
+            </tr>
+            <tr>
+                <td class="cell1">04</td>
+                <td class="cell2">Nemo.</td>
+                <td class="cell3">04</td>
+                <td class="cell4">In.</td>
+                <td class="cell5">Sunt mollitia aperiam ea magni?</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Eveniet.</td>
+                <td class="cell3">05</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Reprehenderit praesentium dicta temporibus hic!</td>
+            </tr>
+            <tr>
+                <td class="cell1">06</td>
+                <td class="cell2">Quo.</td>
+                <td class="cell3">06</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Quae pariatur dignissimos voluptatem modi.</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Rerum!</td>
+                <td class="cell3">07</td>
+                <td class="cell4">Maxime?</td>
+                <td class="cell5">Deserunt explicabo et mollitia suscipit.</td>
+            </tr>
+            <tr>
+                <td class="cell1">08</td>
+                <td class="cell2">Magnam.</td>
+                <td class="cell3">08</td>
+                <td class="cell4">Reprehenderit.</td>
+                <td class="cell5">Non maiores quos sint dolor?</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Illo!</td>
+                <td class="cell3">09</td>
+                <td class="cell4">Sit?</td>
+                <td class="cell5">Ipsa nulla sit quis aliquid.</td>
+            </tr>
+            <tr>
+                <td class="cell1">10</td>
+                <td class="cell2">Magni!</td>
+                <td class="cell3">10</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Doloremque voluptatum illum similique nesciunt?</td>
+            </tr>
+        </table>
+
+        <h1><span id="s2">M</span>ember list</h1>
+
+        <table id="tbl2" class="tbl">
+            <tr>
+                <th class="col1">No</th>
+                <th class="col2">Name</th>
+                <th class="col3">Age</th>
+                <th class="col4">ID</th>
+                <th class="col5">Description</th>
+            </tr>
+
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem.</td>
+                <td class="cell3">01</td>
+                <td class="cell4">Lorem.</td>
+                <td class="cell5">Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr class="grey">
+                <td class="cell1">02</td>
+                <td class="cell2">Itaque.</td>
+                <td class="cell3">02</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Exercitationem nam architecto explicabo quae!</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Error.</td>
+                <td class="cell3">03</td>
+                <td class="cell4">Et?</td>
+                <td class="cell5">Enim ratione officiis consequuntur expedita?</td>
+            </tr>
+            <tr class="grey">
+                <td class="cell1">04</td>
+                <td class="cell2">Nemo.</td>
+                <td class="cell3">04</td>
+                <td class="cell4">In.</td>
+                <td class="cell5">Sunt mollitia aperiam ea magni?</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Eveniet.</td>
+                <td class="cell3">05</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Reprehenderit praesentium dicta temporibus hic!</td>
+            </tr>
+            <tr class="grey">
+                <td class="cell1">06</td>
+                <td class="cell2">Quo.</td>
+                <td class="cell3">06</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Quae pariatur dignissimos voluptatem modi.</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Rerum!</td>
+                <td class="cell3">07</td>
+                <td class="cell4">Maxime?</td>
+                <td class="cell5">Deserunt explicabo et mollitia suscipit.</td>
+            </tr>
+            <tr class="grey">
+                <td class="cell1">08</td>
+                <td class="cell2">Magnam.</td>
+                <td class="cell3">08</td>
+                <td class="cell4">Reprehenderit.</td>
+                <td class="cell5">Non maiores quos sint dolor?</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Illo!</td>
+                <td class="cell3">09</td>
+                <td class="cell4">Sit?</td>
+                <td class="cell5">Ipsa nulla sit quis aliquid.</td>
+            </tr>
+            <tr class="grey">
+                <td class="cell1">10</td>
+                <td class="cell2">Magni!</td>
+                <td class="cell3">10</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Doloremque voluptatum illum similique nesciunt?</td>
+            </tr>
+        </table>
+
+        <h1><span id="s3">M</span>ember list</h1>
+
+        <table id="tbl3" class="tbl">
+            <tr>
+                <th class="col1">No</th>
+                <th class="col2">Name</th>
+                <th class="col3">Age</th>
+                <th class="col4">ID</th>
+                <th class="col5">Description</th>
+            </tr>
+
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem.</td>
+                <td class="cell3">01</td>
+                <td class="cell4">Lorem.</td>
+                <td class="cell5">Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+                <td class="cell1">02</td>
+                <td class="cell2">Itaque.</td>
+                <td class="cell3">02</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Exercitationem nam architecto explicabo quae!</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Error.</td>
+                <td class="cell3">03</td>
+                <td class="cell4">Et?</td>
+                <td class="cell5">Enim ratione officiis consequuntur expedita?</td>
+            </tr>
+            <tr>
+                <td class="cell1">04</td>
+                <td class="cell2">Nemo.</td>
+                <td class="cell3">04</td>
+                <td class="cell4">In.</td>
+                <td class="cell5">Sunt mollitia aperiam ea magni?</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Eveniet.</td>
+                <td class="cell3">05</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Reprehenderit praesentium dicta temporibus hic!</td>
+            </tr>
+            <tr>
+                <td class="cell1">06</td>
+                <td class="cell2">Quo.</td>
+                <td class="cell3">06</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Quae pariatur dignissimos voluptatem modi.</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Rerum!</td>
+                <td class="cell3">07</td>
+                <td class="cell4">Maxime?</td>
+                <td class="cell5">Deserunt explicabo et mollitia suscipit.</td>
+            </tr>
+            <tr>
+                <td class="cell1">08</td>
+                <td class="cell2">Magnam.</td>
+                <td class="cell3">08</td>
+                <td class="cell4">Reprehenderit.</td>
+                <td class="cell5">Non maiores quos sint dolor?</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Illo!</td>
+                <td class="cell3">09</td>
+                <td class="cell4">Sit?</td>
+                <td class="cell5">Ipsa nulla sit quis aliquid.</td>
+            </tr>
+            <tr>
+                <td class="cell1">10</td>
+                <td class="cell2">Magni!</td>
+                <td class="cell3">10</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Doloremque voluptatum illum similique nesciunt?</td>
+            </tr>
+        </table>
+
+        <h1><span id="s4">M</span>ember list</h1>
+
+        <table id="tbl4" class="tbl">
+            <tr>
+                <th class="col1">No</th>
+                <th class="col2">Name</th>
+                <th class="col3">Age</th>
+                <th class="col4">ID</th>
+                <th class="col5">Description</th>
+            </tr>
+
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem.</td>
+                <td class="cell3">01</td>
+                <td class="cell4">Lorem.</td>
+                <td class="cell5">Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+                <td class="cell1">02</td>
+                <td class="cell2">Itaque.</td>
+                <td class="cell3">02</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Exercitationem nam architecto explicabo quae!</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Error.</td>
+                <td class="cell3">03</td>
+                <td class="cell4">Et?</td>
+                <td class="cell5">Enim ratione officiis consequuntur expedita?</td>
+            </tr>
+            <tr>
+                <td class="cell1">04</td>
+                <td class="cell2">Nemo.</td>
+                <td class="cell3">04</td>
+                <td class="cell4">In.</td>
+                <td class="cell5">Sunt mollitia aperiam ea magni?</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Eveniet.</td>
+                <td class="cell3">05</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Reprehenderit praesentium dicta temporibus hic!</td>
+            </tr>
+            <tr>
+                <td class="cell1">06</td>
+                <td class="cell2">Quo.</td>
+                <td class="cell3">06</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Quae pariatur dignissimos voluptatem modi.</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Rerum!</td>
+                <td class="cell3">07</td>
+                <td class="cell4">Maxime?</td>
+                <td class="cell5">Deserunt explicabo et mollitia suscipit.</td>
+            </tr>
+            <tr>
+                <td class="cell1">08</td>
+                <td class="cell2">Magnam.</td>
+                <td class="cell3">08</td>
+                <td class="cell4">Reprehenderit.</td>
+                <td class="cell5">Non maiores quos sint dolor?</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Illo!</td>
+                <td class="cell3">09</td>
+                <td class="cell4">Sit?</td>
+                <td class="cell5">Ipsa nulla sit quis aliquid.</td>
+            </tr>
+            <tr>
+                <td class="cell1">10</td>
+                <td class="cell2">Magni!</td>
+                <td class="cell3">10</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Doloremque voluptatum illum similique nesciunt?</td>
+            </tr>
+        </table>
+
+        <h1><span id="s5">M</span>ember list</h1>
+
+        <table id="tbl5" class="tbl">
+            <tr>
+                <th class="col1">No</th>
+                <th class="col2">Name</th>
+                <th class="col3">Age</th>
+                <th class="col4">ID</th>
+                <th class="col5">Description</th>
+            </tr>
+
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem.</td>
+                <td class="cell3">01</td>
+                <td class="cell4">Lorem.</td>
+                <td class="cell5">Lorem ipsum dolor sit amet.</td>
+            </tr>
+            <tr>
+                <td class="cell1">02</td>
+                <td class="cell2">Itaque.</td>
+                <td class="cell3">02</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Exercitationem nam architecto explicabo quae!</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Error.</td>
+                <td class="cell3">03</td>
+                <td class="cell4">Et?</td>
+                <td class="cell5">Enim ratione officiis consequuntur expedita?</td>
+            </tr>
+            <tr>
+                <td class="cell1">04</td>
+                <td class="cell2">Nemo.</td>
+                <td class="cell3">04</td>
+                <td class="cell4">In.</td>
+                <td class="cell5">Sunt mollitia aperiam ea magni?</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Eveniet.</td>
+                <td class="cell3">05</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Reprehenderit praesentium dicta temporibus hic!</td>
+            </tr>
+            <tr>
+                <td class="cell1">06</td>
+                <td class="cell2">Quo.</td>
+                <td class="cell3">06</td>
+                <td class="cell4">Quibusdam.</td>
+                <td class="cell5">Quae pariatur dignissimos voluptatem modi.</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Rerum!</td>
+                <td class="cell3">07</td>
+                <td class="cell4">Maxime?</td>
+                <td class="cell5">Deserunt explicabo et mollitia suscipit.</td>
+            </tr>
+            <tr>
+                <td class="cell1">08</td>
+                <td class="cell2">Magnam.</td>
+                <td class="cell3">08</td>
+                <td class="cell4">Reprehenderit.</td>
+                <td class="cell5">Non maiores quos sint dolor?</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Illo!</td>
+                <td class="cell3">09</td>
+                <td class="cell4">Sit?</td>
+                <td class="cell5">Ipsa nulla sit quis aliquid.</td>
+            </tr>
+            <tr>
+                <td class="cell1">10</td>
+                <td class="cell2">Magni!</td>
+                <td class="cell3">10</td>
+                <td class="cell4">Possimus?</td>
+                <td class="cell5">Doloremque voluptatum illum similique nesciunt?</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin-bottom: 300px;
+        }
+
+        /* 
+        
+        입력 폼 관련 선택자
+        1. :focus
+        2. :enabled
+        3. :disabled
+        4. :checked
+        5. :required
+        6. :read-only
+        7. :optional
+
+        */
+
+        input {
+            border: 1px solid #999;
+            background-color: white;
+            outline: none;
+        }
+
+        input:focus { background-color: violet; }
+
+        input:required { background-color: lightcoral; }
+        input:read-only { cursor: not-allowed;}
+        input:optional { background-color: lightgreen; }
+
+
+        /* 체크박스, 라디오버튼, 셀렉트박스 등.. : CSS 적용이 거의 안되는 태그들 */
+        /* input[type=checkbox]:checked, input[type=radio]:checked {
+            width: 40px;
+            height: 40px;
+        } */
+
+        input.cat + img {
+            opacity: .3;
+        }
+
+        input.cat:checked + img {
+            opacity: 1;
+        }
+
+
+        #cb1 + label + div {
+            visibility: hidden;
+        }
+
+        #cb1:checked + label + div {
+            visibility: visible;
+        }
+
+
+
+        .item {
+            border: 1px solid #CCC;
+            width: 200px;
+            font-size: 14px;
+            color: #444;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .item > input[type=checkbox] {
+            display: none;
+        }
+
+        .item > label {
+            display: block;
+            background-color: #EEE;
+            padding: 5px;
+            font-weight: bold;
+            font-variant: small-caps;
+            cursor: pointer;
+            border-bottom: 1px solid #CCC;
+        }
+
+        .item > div {
+            padding: 10px
+        }
+
+        .item > input[type=checkbox]:checked + label + div {
+            display: none;
+        }
+
+        .item > input[type=checkbox]:checked + label {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex39_selector.html -->
+
+    <h1>입력 폼</h1>
+
+    <form action="">
+        <input type="text" required><br> 
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text" required><br>
+        <input type="text" readonly><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text" disabled><br>
+        <input type="text"><br>
+        <input type="text" required><br>
+        <input type="text"><br>
+        <input type="text" disabled><br>
+        <input type="text" readonly><br>
+        <input type="text"><br>
+        <input type="text" readonly><br>
+    </form>
+
+    <hr>
+
+    <h1>체크박스 + 라디오 버튼</h1>
+    <form>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="radio" name="rb">
+        <input type="radio" name="rb">
+        <input type="radio" name="rb">
+    </form>
+
+
+    <hr>
+
+    <h1>고양이</h1>
+
+    <form>
+
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty01.png">
+        </div>
+        
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty02.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty03.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty04.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty05.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty06.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty07.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty08.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty09.png">
+            </div>
+            
+        <div>
+            <input type="checkbox" class="cat">
+            <img src="../images/catty10.png">
+            </div>
+
+    </form>
+
+    <hr>
+
+    <div>
+
+        <input type="checkbox" id="cb1" style="display: none;">
+        <label for="cb1">클래스</label>
+        <div>어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구 어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구어쩌구 저쩌구 클래스는 말이야 이런거라고 어쩌구</div>
+
+    </div>
+
+    
+    <hr>
+
+    <h1>자바</h1>
+
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb2">
+        <label for="cb2">Class</label>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi sunt facere maxime asperiores tempora, nam quam saepe. Dolores, repudiandae!
+        </div>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb3">
+        <label for="cb3">Method</label>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi sunt facere maxime asperiores tempora, nam quam saepe. Dolores, repudiandae!
+        </div>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb4">
+        <label for="cb4">Interface</label>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos excepturi sunt facere maxime asperiores tempora, nam quam saepe. Dolores, repudiandae!
+        </div>
+    </div>
+
+
+</body>
+</html>
