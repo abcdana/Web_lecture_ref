@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'IBMPlexSansKR-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        main {
+            font-family: 'IBMPlexSansKR-Regular';
+            width: 1400px;
+            height: 850px;
+            border: black 1px solid;
+            background-color: #DDD;
+            /* margin: -8px -8px; */
+        }
+        
+        main input[name=rb] {
+            display: none;
+        }
+
+        main input[type=radio]:checked + label {
+			background-color: #589dbd;
+			color: white;
+		}
+        
+        main label {
+			border-bottom: 1px solid gray;
+			float: left;
+			width: 25%;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			cursor: pointer;
+        }
+
+        header {
+            background-color: white;
+        }
+
+        header img {
+            width: 20px;
+            float: left;
+        }
+
+        header input {
+            /* border: none; */
+            width: 900px;
+            height: 30px;
+            float: left;
+        }
+
+        #pic {
+            width: 60px;
+        }
+        
+        header .crop {
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            border-radius: 70%;
+            float: left;
+        }
+    
+        header #pic {
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        header #user {
+            float: left;
+            padding-top: 6px;
+            padding-left: 15px;
+        }
+
+        header #name {
+            font-weight: bold;
+        }
+
+
+        section {
+            background-color: #EEE;
+        }
+
+        nav input, nav label {
+            background-color: white;
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Welcome, Dana Joy</h1>
+            <img src="../images/search.png">
+            <input type="text" value="Search...">
+            <div class=crop>
+                <img src="../images/daeun.jpg" id="pic">
+            </div>  
+            <div id="user">
+                <div id="name">Dana Kim</div>
+                <small id="job">developer</small>
+            </div>
+            <div style="clear:both;"></div>
+        </header>
+        <nav>
+            <input type="radio" id="rb1" name="rb" checked>
+            <label for="rb1">Boards</label>
+            <input type="radio" id="rb2" name="rb">
+            <label for="rb2">Schedule</label>
+            <input type="radio" id="rb3" name="rb">
+            <label for="rb3">Messages</label>
+            <input type="radio" id="rb4" name="rb">
+            <label for="rb4">Team Members</label>
+            <input type="radio" id="rb5" name="rb">
+            <label for="rb5">Setting</label>
+            <div style="clear:both;"></div>
+            <div class="menu" id="menu1">
+                <h1 id="title1">Boards</h1>
+                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptas!</div>
+            </div>
+            <div class="menu" id="menu2">
+                <h1 id="title2">Schedule</h1>
+                <div class="content">Voluptatum, fugiat. Vero ratione fuga sequi reprehenderit iste repudiandae itaque.</div>
+                <section>
+                    <ul>
+                        <li id="list1">
+                            1월
+                            <div class="todo">Lorem, ipsum.</div>
+                            <div class="desc">Lorem ipsum dolor sit amet.</div>
+                            <div class="date">1월3일</div>
+                            <div class="with"><img src="../images/woman_01.png" alt=""></div>
+                        </li>
+                        <li id="list2">
+                            2월
+                            <div class="todo">Nihil, dolorum?</div>
+                            <div class="desc">Consectetur aut sit recusandae ratione?</div>
+                            <div class="date">2월3일</div>
+                            <div class="with"><img src="../images/woman_02.png" alt=""></div>
+                        </li>
+                        <li id="list3">
+                            3월
+                            <div class="todo">Illum, error!</div>
+                            <div class="desc">Dolore laudantium optio iusto aliquid.</div>
+                            <div class="date">3월3일</div>
+                            <div class="with"><img src="../images/woman_03.png" alt=""></div>
+                        </li>
+                        <li id="list4">
+                            4월
+                            <div class="todo">Dolorem, adipisci!</div>
+                            <div class="desc">Sapiente dignissimos culpa dolores fuga?</div>
+                            <div class="date">4월3일</div>
+                            <div class="with"><img src="../images/woman_04.png" alt=""></div>
+                        </li>
+                        <li id="list5">
+                            5월
+                            <div class="todo">Quisquam, atque.</div>
+                            <div class="desc">Qui odit delectus velit enim!</div>
+                            <div class="date">5월3일</div>
+                            <div class="with"><img src="../images/woman_05.png" alt=""></div>
+                        </li>
+                        <li id="list6">
+                            6월
+                            <div class="todo">Illo, placeat.</div>
+                            <div class="desc">Eveniet repellendus voluptatibus maxime asperiores!</div>
+                            <div class="date">6월3일</div>
+                            <div class="with"><img src="../images/woman_06.png" alt=""></div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="menu" id="menu3">
+                <h1 id="title3">Messages</h1>
+                <div class="content">Atque fugiat ullam esse minus deleniti optio voluptatem provident voluptate.</div>
+            </div>
+            <div class="menu" id="menu4">
+                <h1 id="title4">Team Member</h1>
+                <div class="content">Perferendis unde tenetur voluptatibus. Atque doloremque accusantium facilis aliquam ipsa.</div>
+            </div>
+            <div class="menu" id="menu5">
+                <h1 id="title5">Setting</h1>
+                <div class="content">Modi distinctio dolorum esse ab ut unde perferendis! A, veritatis.</div>
+            </div>
+        </nav>
+
+    </main>
+</body>
+</html>
