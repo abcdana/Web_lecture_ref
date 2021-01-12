@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #container {
+            width: 600px;
+            height: 100%;
+            margin: 0px auto;
+        }
+
+        #content {
+            width: 550px;
+            height: 550px;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        /* 550 500 450 400 350 300 250 */
+
+        #content div {
+            /* border: 1px solid black; */
+        }
+
+        #content #box1 {
+            background-color: red;
+            width: 550px;
+            height: 550px;
+        }
+        
+        #content #box2 {
+            background-color: orange;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 25px;
+            top: 25px;
+        }
+
+        #box1:hover ~ #box2, #box1:hover ~ #box3, #box1:hover ~ #box4, #box1:hover ~ #box5, #box1:hover ~ #box6, #box1:hover ~ #box7 {
+            border-radius: 10%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+
+        #box3:hover , #box4:hover ~ #box2, #box5:hover ~ #box2, #box7:hover ~ #box2 {
+            border-radius: 10%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #box2:hover ~ #box3, #box2:hover ~ #box4, #box2:hover ~ #box5, #box2:hover ~ #box6, #box2:hover ~ #box7  {
+            border-radius: 20%;
+            transition-property: all;
+            transition-duration: 1s;
+        }          
+
+        #content #box3 {
+            background-color: yellow;
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        #content #box3:hover ~ div {
+            border-radius: 30%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #content #box4{
+            background-color: green;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 75px;
+            top: 75px;
+            
+        }
+
+        #content #box4:hover ~ div {
+            border-radius: 40%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #content #box5 {
+            background-color: blue;
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        #content #box5:hover ~ div {
+            border-radius: 40%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #content #box6 {
+            background-color: darkblue;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 125px;
+            top: 125px;
+        }
+
+        #content #box6:hover ~ div {
+            border-radius: 50%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #content #box7 {
+            background-color: purple;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 150px;
+            top: 150px;
+        }
+
+        #content #box7:hover {
+            border-radius: 50%;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>transition + :hover + border-radius</h1>
+
+        <div>아래 상자에 마우스를 올리면 변화를 주시오.</div>
+
+        <div id="content">
+            <div id="box1" class="box"></div>
+            <div id="box2" class="box"></div>
+            <div id="box3" class="box"></div>
+            <div id="box4" class="box"></div>
+            <div id="box5" class="box"></div>
+            <div id="box6" class="box"></div>
+            <div id="box7" class="box"></div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* 
+
+global.css (main.css)
+- 사이트 내의 모든 페이지에서 사용할 CSS 파일 -> 공통으로 구현할 CSS를 정의
+
+1. 글꼴(폰트, 크기, 색상 등..)
+
+2. 전체적인 색상
+    a. 텍스트 색상
+    b. 배경 색상
+    c. 테두리 색상
+    d. 컨트롤 색
+
+3. 자주 반복되는 서식 (태그 선택자, 클래스 선택자)
+
+*/
+
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 글꼴 + 태그 선택자 */
+body, p, div, span, ul, ol, li, dl, dt, dd, table, th, td, a, blockquote, input, textarea, fieldset, h1, h2, h3, h4, h5, h6, small, b, i, em {
+    font-family: 'Y_Spotlight';
+    columns: #555;
+    line-height: 1.5em;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+
+a { text-decoration: none; }
+a:hover { color: #333; border-bottom: 1px dashed #333; padding-bottom: 2px;}
+
+hr {
+    border: 0px;
+    border-top: 1px solid #333;
+}
+
+
+.table {
+    border: 1px solid #333;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #333;
+    padding: 4px;
+    font-weight: normal;
+}
+
+.table th {
+    background-color: teal;
+    color: white;
+}
+
+
+.table.large {
+    width: 100%;
+}
+
+.table.middle {
+    width: 70%;
+}
+
+.table.small {
+    width: 50%;
+}
+
+.table.line, .table.line th, .table.line td {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.table.stripe tr:nth-child(odd) {
+    background-color: aliceblue;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+        #box1 {
+            background-color: gold;
+            font-size: 2em;
+            text-decoration: underline;
+        }
+
+        #box2 {
+            background-color: gold;
+            text-shadow: 3px 3px 3px gray;
+            text-decoration: underline;
+        }
+
+        #box3 {
+            background-color: cornflowerblue;
+            font-size: 2em;
+            text-shadow: darkgray;
+        }
+
+        /* CSS -> class를 잘 만들고 잘 사용해야 한다!!! */
+
+
+        .one {
+            background-color: gold;
+            text-decoration: underline;
+        }
+
+        .two {
+            font-size: 2em;
+        }
+
+        .three {
+            text-decoration: 3px 3px 3px gray;
+        }
+
+        .four {
+            background-color: cornflowerblue;
+        }
+
+         /* 클래스는 여러 클래스들을 조합해서 적용시킬 수 있다 */
+
+         /* 
+         ID를 사용하면 1대1 대응
+         단단한 결합
+
+         반복해서 사용할 만한 것들을 클래스로 만들어 놓고
+         조합해서 사용하는 것
+         N대 M 관계
+         컨트롤 하기가 ID 보다 어렵다
+         생산성이 압도적으로 좋다
+          */
+
+    </style>
+</head>
+<body>
+    <!-- ex45.html -->
+
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    
+    <hr>
+    
+    
+    <div class="box one two">상자1</div>
+    <div class="box one three">상자2</div>
+    <div class="box two three four">상자3</div>
+
+</body>
+</html>

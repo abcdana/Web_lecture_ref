@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+        .bgred {
+            width: 550px;
+            height: 550px;
+            
+        }
+
+        .bgorange {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            left: 25px;
+            top: 25px;
+        }
+
+        .bgyellow {
+            width: 450px;
+            height: 450px;
+            position: relative;
+            left: 25px;
+            top: 25px
+        }
+
+        .bggreen {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            left: 25px;
+            top: 25px
+        }
+
+        .bgblue {
+            width: 350px;
+            height: 350px;
+            position: relative;
+            left: 25px;
+            top: 25px
+        }
+
+        .bgnavy {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 25px;
+            top: 25px
+        }
+
+        .bgpurple {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            left: 25px;
+            top: 25px
+        }
+
+       .bgred:hover .bgorange, .bgred:hover .bgyellow, .bgred:hover .bggreen, .bgred:hover .bgblue, .bgred:hover .bgnavy, .bgred:hover .bgpurple {
+           border-radius: 10%;
+           transition: all 1s;
+       } 
+
+       .bgorange:hover .bgyellow, .bgorange:hover .bggreen, .bgorange:hover .bgblue, .bgorange:hover .bgnavy, .bgorange:hover .bgpurple {
+           border-radius: 20%;
+           transition: all 1s;
+       } 
+
+       .bgyellow:hover .bggreen, .bgyellow:hover .bgblue, .bgyellow:hover .bgnavy, .bgyellow:hover .bgpurple {
+           border-radius: 30%;
+           transition: all 1s;
+       } 
+
+       .bggreen:hover .bgblue, .bggreen:hover .bgnavy, .bggreen:hover .bgpurple {
+           border-radius: 40%;
+           transition: all 1s;
+       } 
+
+       .bgblue:hover .bgnavy, .bgblue:hover .bgpurple {
+           border-radius: 50%;
+           transition: all 1s;
+       } 
+
+       .bgnavy:hover .bgpurple {
+           border-radius: 50%;
+           transition: all 1s;
+       } 
+
+    </style>
+</head>
+<body>
+    <!-- exam10.html -->
+    <h1>transition + :hover + border-radius</h1>
+    <div class="des">아래 상자에 마우스를 올리면 변화를 주시오.</div>
+    <div id="box">
+        <div class="bgred">
+            <div class="bgorange">
+                <div class="bgyellow">
+                    <div class="bggreen">
+                        <div class="bgblue">
+                            <div class="bgnavy">
+                                <div class="bgpurple"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+        .box {
+            margin: 20px
+        }
+
+        /* 
+        
+        transform, 변형
+        - 요소의 위치, 크기, 회전, 비틀기(왜곡) 변형을 적용
+        - transform : 값;
+
+        값(함수)
+        1. translate() : 위치 변형 (position : relative와 유사)
+        2. scale() : 배율 변형
+        3. rotate() : 회전 변형
+        4. skew() : 왜곡 변형
+
+        */
+
+        #box1 {
+            /* transform: translate(100px, 100px); */
+        }
+
+        #box1:hover {
+            transform: translate(0px, 100px);
+            position: relative;
+            left: 0px;
+            top: 100px;
+        }
+
+
+
+        #cat > img:hover {
+            transform: translate(0px, -25px);
+            transform: scale(1.2, 1.2);
+            transform: scale(-1.2, 1.2) translate(0px, -30px);
+            transform: rotate(30deg);
+        }
+
+        #box2 {
+            transform: scale(0.3, 1);
+            transform: scale(0.5, -1);
+            transform: scale(1, 1);
+            /* transform: scale(1, 3); */
+        }
+
+        #box2:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        #box3 {
+            transform: rotate(45deg);
+            transform: rotate(90deg);
+            transform: rotate(-90deg);
+        }
+
+        #txt input {
+            display: block;
+            margin-bottom: 10px;
+            width: 300px;
+            /* transform: scale(1, -1); */
+            transform: rotate(35deg);
+        }
+
+        /* #p1 span {
+            color: tomato;
+        } */
+        
+        #p1:hover span {
+            /* color: tomato; */
+            text-shadow: 2px 2px 3px #999;
+            background-color: gold;
+            /* transform: scale(1.3, 1.3); */
+            display: inline-block;
+            transform: translate(0px, -10px);
+        }
+
+        #box4 {
+            transform: skew(0deg, 20deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- ex47_transform.html -->
+
+    <div id="box1" class="box small bgred">상자1</div>
+    <div id="box2" class="box small bgorange">상자2</div>
+    <div id="box3" class="box small bgyellow">상자3</div>
+    <div id="box4" class="box small bggreen">상자4</div>
+    <div id="box5" class="box small bgblue">상자5</div>
+
+    <hr>
+
+    <h1>고양이</h1>
+
+    <div id="cat">
+        <img src="../images/catty01.png" alt="">
+        <img src="../images/catty02.png" alt="">
+        <img src="../images/catty03.png" alt="">
+        <img src="../images/catty04.png" alt="">
+        <img src="../images/catty05.png" alt="">
+    </div>
+
+
+    <h1>텍스트 박스</h1>
+
+    <div id=txt>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+
+
+    <h1>텍스트</h1>
+
+    <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error perspiciatis optio voluptate nostrum! Id, ex? Quos sunt reprehenderit non esse laboriosam quia doloremque ullam vel voluptatum facilis omnis, minus rem provident officia fuga <span>labore</span> libero consequuntur minima repellat voluptates magni nesciunt. Obcaecati doloribus nisi ea maiores ducimus eaque, animi voluptatibus similique dolor. Quos optio id nulla aspernatur nemo culpa quis veniam nesciunt eum at neque, <span>laboriosam impedit deserunt</span> animi, quasi illum repudiandae numquam necessitatibus beatae? Odio, iste quaerat perferendis, sunt enim quidem unde aliquam, hic maxime consequatur ullam! Obcaecati nam reprehenderit corporis aut impedit debitis fuga error quod cupiditate sint culpa, corrupti ut <span>recusandae</span> ipsam quibusdam, nulla aliquam eveniet voluptas suscipit assumenda deleniti officiis in optio? Libero ipsam fugit, tenetur consequuntur a quae? Quo <span>voluptas</span>, ipsum quibusdam libero cupiditate fuga, tempore commodi ex voluptatem sunt consequuntur? Accusamus provident nihil quos dolorum totam natus ipsa doloremque minima maiores. Ab expedita explicabo placeat ullam voluptatem, fugit odio velit? Voluptates inventore repellendus a sint sequi vel libero, repudiandae enim unde perferendis aliquid numquam delectus facere reiciendis odit illo, aspernatur<span>provident? Quos consectetur illo</span> totam deserunt, fugiat qui, natus dolores tenetur dicta est earum molestiae omnis repellat similique itaque laboriosam facilis amet incidunt. Excepturi voluptatem, obcaecati eligendi magnam nisi aspernatur, sequi quod, eius laudantium repudiandae saepe autem sapiente odit inventore unde quae laborum ea accusantium cupiditate sint quaerat debitis libero nulla possimus. Facilis est animi ea! Dignissimos nostrum nulla voluptatem tenetur totam debitis non. Nulla dignissimos distinctio rem labore impedit praesentium quidem <span>veritatis fugit</span> delectus blanditiis, velit autem debitis, tenetur accusantium, tempore aperiam reprehenderit! Fugiat temporibus ut consequatur reprehenderit nobis omnis reiciendis molestias, eaque recusandae magnam vero iusto excepturi explicabo impedit et ipsam laboriosam nihil eligendi, fugit maxime. Expedita necessitatibus, natus eius assumenda nihil est? Laudantium sapiente, quas odit obcaecati magni in incidunt aspernatur?</p>
+</body>
+</html>

@@ -42,18 +42,32 @@
 
         header {
             background-color: white;
+            margin-top: -20px;
+        }
+
+        header h1 {
+            padding: 10px 30px;
         }
 
         header img {
             width: 20px;
             float: left;
+            padding-right: 5px;
         }
 
         header input {
-            /* border: none; */
-            width: 900px;
+            border: none;
+            width: 700px;
             height: 30px;
             float: left;
+        }
+
+        header #search {
+            width: 850px;
+            height: 100px;
+            float: left;
+            padding-left: 300px;
+            padding-top: 20px;
         }
 
         #pic {
@@ -102,8 +116,10 @@
     <main>
         <header>
             <h1>Welcome, Dana Joy</h1>
+            <div id="search">
             <img src="../images/search.png">
-            <input type="text" value="Search...">
+            <input type="text" placeholder="Search...">
+            </div>
             <div class=crop>
                 <img src="../images/daeun.jpg" id="pic">
             </div>  
