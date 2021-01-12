@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    body {
+        width: 700px;
+        margin: 30px auto;
+    }
+
+    .des {
+        border-left: 1px solid #999;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    #box {
+        width: 700px;
+        height: 700px;
+        border: 30px dashed #999;
+    }
+
+    #box .pin {
+        border: 15px solid #666;
+        color: white;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    #hour {
+        border-radius: 50px;
+        width: 50px;
+        height: 150px;
+        position: relative;
+        left: 310px;
+        top: 160px;
+        transition: all 216000s;
+        transform-origin: center bottom;
+        transition-timing-function: linear;
+    }
+
+    #min {
+        border-radius: 50px;
+        width: 50px;
+        height: 225px;
+        position: relative;
+        left: -15px;
+        top: -127px;
+        transition: all 3600s;
+        transform-origin: center bottom;
+        transition-timing-function: linear;
+    }
+
+    #sec {
+        border-radius: 50px;
+        width: 50px;
+        height: 280px;
+        position: relative;
+        left: -15px;
+        top: -107px;
+        transition: all 60s;
+        transform-origin: center bottom;
+        transition-timing-function: linear;
+    }
+
+    #box:hover #hour {
+        transform: rotate(3600deg);
+    }
+
+    #box:hover #sec {
+        transform: rotate(3600deg);
+    }
+
+    #box:hover #min {
+        transform: rotate(3600deg);
+    }
+
+    </style>
+</head>
+<body>
+    <h1>transform(rotate) + transform-origin + transition</h1>
+    <div class="des">시계침을 돌리시오.</div>
+    <div id="box">
+        <div id="hour" class="bgred pin">Hour
+            <div id="min" class="bgblue pin">Min
+                <div id="sec" class="bgyellow pin">Sec</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    body {
+        width: 1400px;
+        margin: 30px auto;
+    }
+
+    .des {
+        border-left: 1px solid #999;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    #list {
+        border: 1px solid black;
+        width: 1400px;
+        height: 750px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .ball {
+        width: 98px;
+        height: 98px;
+        text-align: center;
+        font-size: 70px;
+        font-weight: bold;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-top: 45px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .line {
+        border-top: 1px solid black;
+    }
+
+    #list:hover .ball {
+        position: relative;
+        left: 1300px;
+        transform: rotate(3600deg);
+        transition: all 4s;
+    }
+    
+    #list:hover .ball.bgred {
+        transition-timing-function: linear;
+    }
+    
+    #list:hover .ball.bgorange {
+        transition-timing-function: ease;
+    }
+    
+    #list:hover .ball.bgyellow {
+        transition-timing-function: ease-in;
+    }
+    
+    #list:hover .ball.bggreen {
+        transition-timing-function: ease-out;
+    }
+    
+    #list:hover .ball.bgblue {
+        transition-timing-function: ease-in-out;
+    }
+
+    
+
+
+    </style>
+</head>
+<body>
+    <h1>:hover + position(absolute) + transform(rotate) + transition</h1>
+    <div class="des">공를 회전시키면서 우측으로 이동하시오.</div>
+    <div id="list">
+        <div class="ball bgred">A</div>
+        <div class="line"></div>
+        <div class="ball bgyellow">B</div>
+        <div class="line"></div>
+        <div class="ball bgorange">C</div>
+        <div class="line"></div>
+        <div class="ball bggreen">D</div>
+        <div class="line"></div>
+        <div class="ball bgblue">E</div>
+    </div>
+</body>
+</html>

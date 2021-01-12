@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    body {
+        width: 650px;
+        margin: 30px auto;
+    }
+
+    .des {
+        border-left: 1px solid #999;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    #box {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        padding: 275px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        padding: 60px;
+    }
+
+    .ball {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        position: absolute;
+        left: 335px;
+        top: 335px;
+        transition: 1s;
+    }
+
+
+
+    #box:hover #ball1 {
+        left : 0px;
+        top : 0px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball2 {
+        left : 0px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball3 {
+        left : 0px;
+        top : 666px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball4 {
+        top : 0px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball5 {
+        top : 666px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball6 {
+        left : 666px;
+        top : 0px;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+
+    #box:hover #ball7 {
+        left : 666px;
+        top : 333px;
+        transition-duration: 1.5s;
+        transition-delay: .3s;
+    }
+
+    #box:hover #ball8 {
+        left: 666px;
+        top : 666px;
+        /* transition-duration: 1.5s;
+        transition-delay: 1s; */
+    }
+
+    </style>
+</head>
+<body>
+    <h1>transition + transition-duration + position(absolute)</h1>
+    <div class="des">중심의 공들을 각 방향으로 분산시키시오.</div>
+
+    <div id="box">
+        <div class="circle bgred">
+        <div id="ball1" class="ball bgyellow"></div>
+        <div id="ball2" class="ball bgyellow"></div>
+        <div id="ball3" class="ball bgyellow"></div>
+        <div id="ball4" class="ball bgyellow"></div>
+        <div id="ball5" class="ball bgyellow"></div>
+        <div id="ball6" class="ball bgyellow"></div>
+        <div id="ball7" class="ball bgyellow"></div>
+        <div id="ball8" class="ball bgyellow"></div>
+
+    </div>
+
+</body>
+</html>
