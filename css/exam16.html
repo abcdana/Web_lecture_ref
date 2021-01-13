@@ -18,6 +18,73 @@
         margin-bottom: 20px;
     }
 
+    #box {
+        width: 650px;
+        height: 800px;
+        border: 10px solid black;
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid black;
+        float: left;
+        margin: 0px 11px;
+    }
+
+    /* #ball7::after {
+        content: "";
+        display: block;
+        clear: both;
+    } */
+
+    /* #ball {
+        width: 100px;
+        height: 100px;
+    } */
+    
+    #ball1, #ball2, #ball3, #ball4, #ball5, #ball6, #ball7 {
+        animation-name: pop;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+    }
+
+    #ball1 {
+        animation-duration: 2s;
+    }
+
+    #ball2 {
+        animation-duration: 1s;
+    }
+
+    #ball3 {
+        animation-duration: 1.5s;
+    }
+
+    #ball4 {
+        animation-duration: 1.7s;
+    }
+
+    #ball5 {
+        animation-duration: 1s;
+    }
+
+    #ball6 {
+        animation-duration: 2s;
+    }
+
+    #ball7 {
+        animation-duration: 2.5s;
+    }
+
+    @keyframes pop {
+        0% { margin-top: 0px }
+        50% { margin-top: 730px }
+        100% { margin-top: 0px }
+    }
+
     </style>
 </head>
 <body>
@@ -25,13 +92,16 @@
     <h1>animation + keyframe</h1>
     <div class="des">공 튀기시오.</div>
     <div id="box">
-        <div id="ball1" class="ball"></div>
-        <div id="ball2" class="ball"></div>
-        <div id="ball3" class="ball"></div>
-        <div id="ball4" class="ball"></div>
-        <div id="ball5" class="ball"></div>
-        <div id="ball6" class="ball"></div>
-        <div id="ball7" class="ball"></div>
+        <div id="ball1" class="ball bgred"></div>
+        <div id="ball2" class="ball bgorange"></div>
+        <div id="ball3" class="ball bgyellow"></div>
+        <div id="ball4" class="ball bggreen"></div>
+        <div id="ball5" class="ball bgblue"></div>
+        <div id="ball6" class="ball bgnavy"></div>
+        <div id="ball7" class="ball bgpurple"></div>
+        <div style="clear: both;"></div>
+        <!-- <div id="ball" class="bgpurple"></div> -->
     </div>
+    
 </body>
 </html>

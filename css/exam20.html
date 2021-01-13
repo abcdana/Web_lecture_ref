@@ -7,31 +7,110 @@
     <link rel="stylesheet" href="main.css">
     <style>
 
-    body {
-        width: 700px;
+    #main {
+        width: 500px;
         margin: 30px auto;
     }
 
-    .des {
-        border-left: 1px solid #999;
-        padding-left: 10px;
-        margin-bottom: 20px;
+    h1 {
+        font-variant: small-caps;
+    }
+
+    .item {
+        width: 350px;
+        height: 150px;
+        border: 1px solid #999;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }  
+
+    .item label {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 150px;
+        height: 140px;
+        float: left;
+        font-size: 3em;
+        font-variant: small-caps;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+        background-color: #EEE;
+    }
+
+    .item input {
+        display: none;
+    }
+
+    .item input:checked + label {
+        background-color: cornflowerblue;
+        color: white;
+    }
+
+    .disc {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin-left: 25px;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #disc1 {
+        background-image: url(../images/lp01.png);
+    }
+
+    #disc2 {
+        background-image: url(../images/lp02.png);
+    }
+
+    #disc3 {
+        background-image: url(../images/lp03.png);
+    }
+
+    #disc4 {
+        background-image: url(../images/lp04.png);
+    }
+
+    .item input:checked ~ .disc {
+        animation-name: keyRotate;
+        animation-iteration-count: infinite;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+    }
+
+
+    @keyframes keyRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(180deg); }
     }
 
     </style>
 </head>
 <body>
-    <!-- exam16.html -->
-    <h1>animation + keyframe</h1>
-    <div class="des">공 튀기시오.</div>
-    <div id="box">
-        <div id="ball1" class="ball"></div>
-        <div id="ball2" class="ball"></div>
-        <div id="ball3" class="ball"></div>
-        <div id="ball4" class="ball"></div>
-        <div id="ball5" class="ball"></div>
-        <div id="ball6" class="ball"></div>
-        <div id="ball7" class="ball"></div>
-    </div>
+    <div id="main">
+        <h1>Music</h1>
+        <div class="item">
+            <input type="radio" name="rb" id="rb1">
+            <label for="rb1">Play</label>
+            <div class="disc" id="disc1"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb2">
+            <label for="rb2">Play</label>
+            <div class="disc" id="disc2"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb3">
+            <label for="rb3">Play</label>
+            <div class="disc" id="disc3"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb4">
+            <label for="rb4">Play</label>
+            <div class="disc" id="disc4"></div>
+        </div>
+    </div>		
 </body>
 </html>

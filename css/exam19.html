@@ -4,34 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
     <style>
 
-    body {
-        width: 700px;
-        margin: 30px auto;
-    }
+        body {
+            width: 800px;
+            margin: auto;
+            margin-top: 50px;
+        }
 
-    .des {
-        border-left: 1px solid #999;
-        padding-left: 10px;
-        margin-bottom: 20px;
-    }
+        #main {
+            width: 750px;
+            height: 600px;
+            /* border: 1px black solid; */
+        }
+
+        #txt {
+            text-align: justify;
+        }
+
+        label {
+            border: 1px solid black;
+            width: 50px;
+            float: left;
+            text-align: center;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+
+        #main > input:checked + label {
+            background-color: #666;
+            color: white;
+        }
+
+        #main #cb1:checked ~ #txt {
+            font-weight: bold;
+        }
+
+        #cb2:checked ~ #txt {
+            font-style: italic;
+        }
+
+        #cb3:checked ~ #txt {
+            text-decoration: underline;
+        }
+
+        #cb4:checked ~ #txt {
+            font-size: 2em;
+        }
+
+        #cb5:checked ~ #txt {
+            font-size: .5em;
+        }
+
+        #cb6:checked ~ #txt {
+            text-shadow: #CCC 2px 2px;
+        }
+
+        #cb7:checked ~ #txt {
+            font-variant: small-caps;
+        }
 
     </style>
 </head>
 <body>
-    <!-- exam16.html -->
-    <h1>animation + keyframe</h1>
-    <div class="des">공 튀기시오.</div>
-    <div id="box">
-        <div id="ball1" class="ball"></div>
-        <div id="ball2" class="ball"></div>
-        <div id="ball3" class="ball"></div>
-        <div id="ball4" class="ball"></div>
-        <div id="ball5" class="ball"></div>
-        <div id="ball6" class="ball"></div>
-        <div id="ball7" class="ball"></div>
-    </div>
+    
+    <div id="main">
+        <h1>Text</h1>
+        <input type="checkbox" id="cb1"><label for="cb1">두껍게</label>
+        <input type="checkbox" id="cb2"><label for="cb2">이탤릭</label>
+        <input type="checkbox" id="cb3"><label for="cb3">밑줄</label>
+        <input type="checkbox" id="cb4"><label for="cb4">크게</label>
+        <input type="checkbox" id="cb5"><label for="cb5">작게</label>
+        <input type="checkbox" id="cb6"><label for="cb6">그림자</label>
+        <input type="checkbox" id="cb7"><label for="cb7">꾸미기</label>
+        <div style="clear:both;"></div>
+    
+        <div id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus dicta tenetur fugit repellat nihil commodi. Ex dignissimos quas esse quasi non sunt voluptatum facilis ipsam, accusantium nobis? Quod vitae cumque optio magni dolor, dolores
+            similique ipsa porro doloremque quia inventore architecto nobis debitis nam. Voluptas molestias esse quibusdam facere nemo incidunt temporibus dolor! Molestiae ipsum rerum a veritatis voluptas odio exercitationem perspiciatis recusandae corrupti,
+            excepturi harum dolorem quos aliquam fugit nostrum suscipit! Aliquid corrupti dolorum, pariatur officia facere culpa? Repellat asperiores ad mollitia, temporibus consequatur tempora quia aliquid modi deserunt saepe dignissimos distinctio id
+            iste blanditiis a labore ullam quas suscipit. Doloribus, dolor alias eveniet iusto explicabo sint reprehenderit dolorum perferendis beatae quae error provident in maxime, temporibus rerum, nam praesentium. Iure asperiores modi magni repellendus
+            laudantium eveniet laboriosam placeat ratione totam quo animi, voluptate labore hic, blanditiis ea. Minus rem culpa qui ad consequatur facere corporis at fuga temporibus et sunt, nam eveniet! Facere reprehenderit deserunt possimus atque consequatur
+            ipsum numquam dolorem magni. Alias fugit voluptas inventore esse accusamus? Eligendi nihil accusantium assumenda accusamus porro perferendis perspiciatis quis, itaque inventore commodi, odit culpa tempore enim iure expedita totam exercitationem
+            magni suscipit praesentium nostrum recusandae possimus eaque aut at. Quisquam nostrum excepturi dignissimos, sequi facere alias laudantium perferendis quibusdam, earum commodi quam explicabo ut non temporibus facilis velit fugiat accusamus.
+        </div>
+    </div>	
+
 </body>
 </html>
+	
