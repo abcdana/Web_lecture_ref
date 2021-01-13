@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex05_function.html -->
+
+    <script>
+        
+        var s; // 이런 형태로 끌어올리기 때문에 변수선언은 했으나 초기화를 안했으므로 undefined로 나온다.
+
+        // 변수 호이스팅, Variable Hoisting => 사용 금지!!! (코드가 너무 지저분해지고, 헷갈려짐)
+        console.log(s);
+        var s = 10; // 동일한 이름의 변수를 선언해도 에러가 나지 않는다. -> 덮어쓰기 형태
+        console.log(s);
+        
+        // 함수 호이스팅, Function Hoisting => 종종 사용** (클라이언트 업무 구인 시, 면접에서 잘 물어봄)
+        function f4() {
+            console.log("f4");
+        }
+
+        // 함수 호이스팅, Function Hoisting
+        f4();
+
+
+        /*
+        
+        JavaScript Function
+        - 함수, 메소드, 프로시저 등..
+
+        자바 메소드
+        public [static] int m1(int num) {
+            return 100 + num;
+        }
+
+        자바스크립트 함수
+        function m1(num) {
+            return 100 + num;
+        }
+        
+        */
+
+        var num; // null -> undefined ==> 변수가 생성된 후 초기화 되어있지 않은 상태
+        console.log(num);
+
+        num = null; // 개발자가 의도적으로 비어있는 상태로 만든 상태
+        console.log(null);
+
+        console.log(null == undefined); // 같다
+        console.log(null === undefined); // 다르다
+
+        //비교 연산자
+        // - 자료형은 비교하지 않는다.
+        console.log(100 == 100);    //true
+        console.log("100" == 100);  //true
+
+        //진성 비교 연산자
+        // - 자료형도 비교한다.
+        console.log(100 === 100);   //true
+        console.log("100" === 100); //false -> 우리가 알고 있는 equal은 ===이다.
+
+
+       
+        function f1() {
+            console.log("f1");
+        }
+
+        f1();
+
+        function f2() {
+            // console.log("f2", num);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+        }
+
+        // console.clear();
+        f2(100);
+        f2(200);
+        f2(300);
+        f2();
+        // console.clear();
+        f2(100,200,300);
+
+
+        function f3() {
+            return 10;
+        }
+
+        console.log("f3", f3());
+
+
+
+
+        
+ 
+    </script>
+</body>
+</html>
