@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex09_date.html -->
+
+    <script>
+
+        //날짜 시간
+        //  - Date 객체
+        //  - Object형
+
+        //현재 시각
+        //Calender.getInstance()
+        var now = new Date();
+        console.log(now);
+
+        //요소 추출
+        //c.get(Calender.HOUR)
+        console.log(now.getYear()); //121 -> 2000년도 되기 이전에 쓰던 함수.. 두자리 년도 함수
+        console.log(now.getFullYear()); //2021
+        console.log(now.getMonth()); //0 (0 (1월) ~ 11 (12월))
+        console.log(now.getDate());  //13
+        console.log(now.getDay());  //3 ( 0 (일) ~ 6 (토))
+        console.log(now.getHours());  //시
+        console.log(now.getMinutes());  //분
+        console.log(now.getSeconds());  //초
+        console.log(now.getMilliseconds());  //밀리초
+        console.log(now.getTime()); //틱. 1970년 1월 1일 00:00:00을 기준으로 함
+
+        
+        //출력
+        console.log(now);
+        console.log(now.toString());
+        console.log(now.toLocaleString());
+
+        console.log(now.toDateString());
+        console.log(now.toTimeString());
+
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleTimeString());
+
+
+        //특정 시각
+        var christmas = new Date();
+
+        christmas.setFullYear(2021);
+        christmas.setMonth(11);
+        christmas.setDate(25);
+
+        console.log(christmas.toLocaleString());
+
+
+
+        //연산
+        console.log(christmas - now);
+        console.log((christmas - now) / 1000 / 60 / 60 / 24); //시각-시각 => 가능. 그러나 단위가 milli seconds이다.
+
+        //연산
+        var d1 = new Date();
+        d1.setTime(now.getTime() + (100 * 24 * 60 * 60 * 1000));
+        console.log(d1.toLocaleString());
+
+
+
+
+
+    </script>
+</body>
+</html>
