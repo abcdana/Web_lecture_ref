@@ -11,14 +11,80 @@
             margin: auto;
         }
 
+        .tbl {
+            width: 650px;
+            height: 200px;
+        }
+
+        .tbl, tr, td {
+            border: 1px solid #999;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #EEE;
+            width: 120px;
+        }
+
+        td {
+            padding-left: 10px;
+        }
+
+        #zip {
+            width: 80px;
+        }
+
+        #add1, #add2 {
+            width: 490px;
+        }
+
+        .txt, a {
+            height: 25px;
+        }
+
+        a {
+            border: 1px solid #999;
+            background-color: #EEE;
+            display: inline-block;
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+            padding: 2px 3px;
+        }
+
+
     </style>
 </head>
 <body>
     <div id="main">
-		<h1>롤오버 이미지</h1>
-        <div>마우스를 이미지에 올리거나 내리면 그에 반응하여 이미지를 바꾸시오.</div>
+		<h1>우편 번호 검색</h1>
+		<div>새창을 띄운 뒤 우편 번호 검색을 하시오.</div>
         <hr>
+
+        <form action="" name="form1">
+            <h1>우편 번호 검색</h1>
+            <table class="tbl">
+                <tr>
+                    <th>우편번호</th>
+                    <td>
+                        <input type="text" class="txt" name="zip" id="zip">
+                        <a href="">우편번호검사하기</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>
+                        <input type="text" class="txt" name="add1" id="add1">
+                    </td>
+                </tr>
+                <tr>
+                    <th>상세주소</th>
+                    <td>
+                        <input type="text" class="txt" name="add2" id="add2">
+                    </td>
+                </tr>
+            </table>
+        </form>
         
     </div>
-</body>
 </html>

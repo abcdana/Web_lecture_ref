@@ -11,14 +11,39 @@
             margin: auto;
         }
 
+        #txtMessage {
+            color: tomato;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
     <div id="main">
-		<h1>롤오버 이미지</h1>
-        <div>마우스를 이미지에 올리거나 내리면 그에 반응하여 이미지를 바꾸시오.</div>
+		<h1>아이디 유효성 검사</h1>
+		<div>아이디 유효성 검사를 하시오.</div>
         <hr>
-        
+        <form name="form1">
+            <div>
+            아이디 : <input type="text" name="txtId" id="txtId">
+            <input type="text" name="txtMessage" id="txtMessage" readonly="readonly">
+            </div>
+        </form>
     </div>
+
+    <script>
+
+        txtId.onkeyup = function() {
+            console.log(txtId.value.length);
+            if (txtId.value.length < 5) {
+                txtMessage.value = "아이디가 짧다.";  
+            } else if (txtId.value.length > 10) {
+                txtMessage.value = "아이디가 길다.";  
+            } else {
+                txtMessage.value = "";  
+            }
+        };
+
+    </script>
 </body>
 </html>

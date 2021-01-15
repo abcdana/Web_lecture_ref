@@ -7,18 +7,94 @@
     <style>
 
         #main {
-            width: 900px;
+            width: 600px;
             margin: auto;
         }
+
+        #box {
+            width: 500px;
+            height: 190px;
+            border: 1px solid #999;
+            padding: 10px;
+        }
+
+        a {
+            width: 100px;
+            height: 27px;
+            border: 1px solid #DDD;
+            margin-bottom: 10px;
+            display: block;
+            background-color: #EEE;
+            color: #666;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #list {
+            float: left;
+            margin: 0px 30px;
+        }
+
+        img {
+            border-left: 1px solid #999;
+            padding-left: 50px;
+            display: inline;
+        }
+
 
     </style>
 </head>
 <body>
     <div id="main">
-		<h1>롤오버 이미지</h1>
-        <div>마우스를 이미지에 올리거나 내리면 그에 반응하여 이미지를 바꾸시오.</div>
+		<h1>롤오버 이미지 + 새창 띄우기</h1>	
+		<div>좌측 링크에 마우스를 올리면 우측 이미지를 변경하고 클릭하면 큰 이미지를 새창으로 띄우시오.</div>
         <hr>
         
+        <div id="box">
+            <div id="list">
+                <a href="../images/dog01_big.jpg" name="dog1">강아지1</a>
+                <a href="../images/dog02_big.jpg" name="dog1">강아지2</a>
+                <a href="../images/dog03_big.jpg" name="dog1">강아지3</a>
+                <a href="../images/dog04_big.jpg" name="dog1">강아지4</a>
+                <a href="../images/dog05_big.jpg" name="dog1">강아지5</a>
+            </div>
+            <img src="../images/dog01.jpg" alt="">
+        </div>
+
     </div>
+
+    <script>
+
+        var dog1 = window.document.links[0];
+        var dog2 = window.document.links[1];
+        var dog3 = window.document.links[2];
+        var dog4 = window.document.links[3];
+        var dog5 = window.document.links[4];
+
+        var img = window.document.images[0];
+
+        dog1.onmouseover = function() {
+            img.src = "../images/dog01.jpg";
+        };
+
+        dog2.onmouseover = function() {
+            img.src = "../images/dog02.jpg";
+        };
+
+        dog3.onmouseover = function() {
+            img.src = "../images/dog03.jpg";
+        };
+
+        dog4.onmouseover = function() {
+            img.src = "../images/dog04.jpg";
+        };
+
+        dog5.onmouseover = function() {
+            img.src = "../images/dog05.jpg";
+        };
+
+    </script>
+
 </body>
 </html>

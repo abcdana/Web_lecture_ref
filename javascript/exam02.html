@@ -6,19 +6,89 @@
     <title>Document</title>
     <style>
 
-        #main {
-            width: 900px;
+        form {
+            width: 1400px;
             margin: auto;
         }
 
     </style>
 </head>
 <body>
-    <div id="main">
+
+    <form name="form1">
 		<h1>롤오버 이미지</h1>
         <div>마우스를 이미지에 올리거나 내리면 그에 반응하여 이미지를 바꾸시오.</div>
         <hr>
+        <img src="../images/cat01.jpg" name="cat1" alt="">
+        <img src="../images/cat02.jpg" name="cat2" alt="">
+        <img src="../images/cat03.jpg" name="cat3" alt="">
+        <img src="../images/cat04.jpg" name="cat4" alt="">
+        <img src="../images/cat05.jpg" name="cat5" alt="">
+    </form>
+
+    <script>
+
+        var cat1 = window.document.images["cat1"];
+        var cat2 = window.document.images["cat2"];
+        var cat3 = window.document.images["cat3"];
+        var cat4 = window.document.images["cat4"];
+        var cat5 = window.document.images["cat5"];
+
+        cat1.onmouseover = function() {
+            cat1.src = "../images/dog01.jpg";
+        };
         
-    </div>
+        cat1.onmouseout = function() {
+            cat1.src = "../images/cat01.jpg";
+        };
+        
+        cat2.onmouseover = function() {
+            cat2.src = "../images/dog02.jpg";
+        };
+        
+        cat2.onmouseout = function() {
+            cat2.src = "../images/cat02.jpg";
+        };
+        
+        cat3.onmouseover = function() {
+            cat3.src = "../images/dog03.jpg";
+        };
+        
+        cat3.onmouseout = function() {
+            cat3.src = "../images/cat03.jpg";
+        };
+        
+        cat4.onmouseover = function() {
+            cat4.src = "../images/dog04.jpg";
+        };
+        
+        cat4.onmouseout = function() {
+            cat4.src = "../images/cat04.jpg";
+        };
+        
+        cat5.onmouseover = function() {
+            cat5.src = "../images/dog05.jpg";
+        };
+        
+        cat5.onmouseout = function() {
+            cat5.src = "../images/cat05.jpg";
+        };
+             
+        
+
+        // for (var i=0; i<5; i++) {
+
+        //     var img = window.document.images[i];
+        //     console.log(img);
+        //     console.log("보여?")
+        //     img.onmouseover = function() {
+        //         console.log("얘보여?")
+        //         console.log(img);
+        //         img.src = "../images/dog0" + i + ".jpg";
+        //     };
+        // };
+
+
+    </script>
 </body>
 </html>

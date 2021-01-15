@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #main {
+            width: 900px;
+            margin: auto;
+        }
+
+        #list {
+            border: 1px solid #DDD;
+            width: 550px;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        #label {
+            margin-top: 10px;
+            border: none;
+            font-size: 1.8em;
+            width: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+		<h1>롤오버 이미지 + 텍스트 박스</h1>
+		<div>이미지에 반응해 아래의 텍스트를 같이 변경하시오.</div>
+        <hr>
+        <div id="list">
+            <img src="../images/img01.jpg" name="img1" alt="" >
+            <img src="../images/img02.jpg" name="img2" alt="" >
+            <img src="../images/img03.jpg" name="img3" alt="" >
+        </div>
+        <input type="text" name="label" id="label" readonly="readonly" />
+    </div>
+
+    <script>
+
+        var img1 = window.document.images[0];
+        var img2 = window.document.images[1];
+        var img3 = window.document.images[2];
+
+        // var label = window.document.form.label;
+
+        img1.onmouseover = function() {
+            img1.src = "../images/img04.jpg";
+            label.value = "스키타는 사람이 당근으로 변했다";
+        };
+        
+        img1.onmouseout = function() {
+            img1.src = "../images/img01.jpg";
+            label.value = "";
+        };
+
+        img2.onmouseover = function() {
+            img2.src = "../images/img05.jpg";
+            label.value = "해바라기가 피망으로 변했다";
+        };
+        
+        img2.onmouseout = function() {
+            img2.src = "../images/img02.jpg";
+            label.value = "";
+        };
+
+        img3.onmouseover = function() {
+            img3.src = "../images/img06.jpg";
+            label.value = "나무가 개로 변했다";
+        };
+        
+        img3.onmouseout = function() {
+            img3.src = "../images/img03.jpg";
+            label.value = "";
+        };
+
+    </script>
+
+</body>
+</html>
