@@ -163,12 +163,12 @@
             // - value 속성을 정의 안하면 자동으로 "on"이라는 value값이 들어있다.
             // alert(rb.value);
         
-            // for (var i=0; i<rb.length; i++) {
-            //     // alert(rb[i].checked);
-            //     if (rb[i].checked) {
-            //         alert(rb[i].value);
-            //     }
-            // }
+            for (var i=0; i<rb.length; i++) {
+                // alert(rb[i].checked);
+                if (rb[i].checked) {
+                    alert(rb[i].value);
+                }
+            }
 
 
             rb[3].checked = true; //임의로 특정 라디오버튼을 선택하는 구문
@@ -177,10 +177,10 @@
 
         
         //JavaScript 변수 선언문
-        //1. var : 블럭(함수)
-        //2. var(X) : 사용금지
-        //3. const : 상수 선언
-        //4. let : 변수 선언. 블럭(함수, 제어문) -> 자바와 유사함
+        // 1. var : 블럭(함수)
+        // 2. var(X) : 사용금지
+        // 3. const : 상수 선언
+        // 4. let : 변수 선언. 블럭(함수, 제어문) -> 자바와 유사함
         
         for (let i=0; i<rbColor.length; i++) {
             
@@ -188,24 +188,22 @@
 
                 //alert("클릭");
                 //누구를 클릭?
-                // alert(i); -> Q i가 왜 4가 나오지?? A 변수 호이스팅 때문입니다.
+                // alert(i); // -> Q i가 왜 4가 나오지?? A 변수 호이스팅 때문입니다.
 
-                //1. 2015년 이전 해결 방법
-                //2. ES6(2015년) 이후 해결 방법
+                // 1. 2015년 이전 해결 방법
+                // 2. ES6(2015년) 이후 해결 방법
 
-                //1.
+                // 1.
                 // alert(event.srcElement.value);
                 // document.body.bgColor = event.srcElement.value;
 
-                //2.
-                //let으로 변수를 선언한 후에는 i값이 제대로 나온다.
+                // 2.
+                // let으로 변수를 선언한 후에는 i값이 제대로 나온다.
                 // -> 제어문안에서 지역변수로 선언이 가능하다.
                 // alert(i);
                 // document.body.bgColor = rbColor[i].value;
                 
-
                 document.body.bgColor = event.srcElement.value;
-
 
             };
 
