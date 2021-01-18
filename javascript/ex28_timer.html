@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex28_timer.html -->
+
+    <h1>Timer</h1>
+
+    <form action="" name="form1">
+        <input type="text" name="txt1" id="">
+        <hr>
+        <input type="button" name="btn1" value="확인1">
+        <hr>
+
+        <input type="text" name="txt2">
+        <hr>
+        <input type="button" value="시작" name="btnStart">
+        <input type="button" value="멈춤" name="btnStop">
+        
+
+    </form>
+
+    <script>
+
+        var txt1 = document.form1.txt1;
+        var btn1 = document.form1.btn1;
+
+        var txt2 = document.form1.txt2;
+        var btnStart = document.form1.btnStart;
+        var btnStop = document.form1.btnStop;
+
+        btn1.onclick = function() {
+
+            //JavaScript Timer
+            // - 정해진 시간에 미리 준비해둔 코드를 실행하는 도구
+
+            //1. setTimeout()
+            // - 정해진 시간이 지나면 코드를 호출하고 종료함
+            // - 일회성 타이머 (ex, 라면 타이머)
+            //2. setInterval()
+            // - 정해진 시간이 될 때마다 코드를 호출하며, 반복이 됨
+            // - 반복성 타이머 (ex, 학교 종)
+
+            //JavaScript는 함수를 데이터처럼 취급 할 수 있다.
+            // - 함수를 변수에 대입할 수 있다.
+            // - 함수를 매개변수에 전달할 수 있다.
+
+            // window.setTimeout()
+            // setTimeout(함수, 시간)
+
+            // setTimeout(function() {
+            //     alert("따르릉"); 
+            // }, 3000); //ms
+
+            // setTimeout(function() {
+            //     document.body.bgColor = "gold";
+            // }, 1500);
+
+            // setInterval(function() {
+            //     console.log(new Date());
+            // }, 3000);
+            
+            // setInterval(function() {
+            //     var now = new Date();
+            //     txt1.value = now.toLocaleTimeString();                
+            // }, 1000);
+            
+            //초시계, 스톱워치
+            // setInterval(function() {
+            //     txt1.value = n;
+            //     n++;
+            // }, 10);
+
+            setInterval(function() {
+                txt1.size++;
+            }, 1000);
+
+            
+            
+        }; //btn1.onclick
+        
+
+        //3초가 지났을 때 아무것도 못하게 만들어라. -> 일회성업무
+        // setTimeout(function() {
+        //     txt1.disabled = true;
+        //     btn1.disabled = true;
+        // }, 3000);
+        
+        var n = 1; //전역변수
+
+        
+        //구글 페이지로 3초후에 이동합니다.
+        // setTimeout(function() {
+        //     location.href = "http://google.com";
+        // }, 3000);
+
+
+
+        //setInterval() <-> clearInterval()
+        //setTimeout() <-> clearTimeout()
+
+        var timer = 0;
+
+        btnStart.onclick = function(){
+            
+            // 시작버튼 여러번 눌러도 타이머가 여러개 실행 되지 않도록 만드려면?
+            if (timer == 0) {
+                timer = setInterval(function() {
+                    txt2.value = n;
+                    n++;
+                }, 100);
+                console.log(timer);
+            }
+
+        };
+
+        btnStop.onclick = function(){
+            clearInterval(timer);
+            timer = 0;
+        };
+            
+        </script>
+
+</body>
+</html>

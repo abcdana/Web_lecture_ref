@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main {
+            width: 700px;
+            margin: auto;
+        }
+
+        .mainHeader {
+            border-bottom: 1px dashed #AAA;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- exam09.html -->
+    <div class="main">
+        <div class="mainHeader">
+            <h1>텍스트 박스 입력 + 잠금</h1>
+            <div>체크박스를 사용해 텍스트 박스를 제어하시오.</div>
+        </div>
+        <table id="tbl1">
+            <tr>
+                <td>
+                    <h4>차단된 친구</h4>
+                    <select name="leftList">
+                        <option value="1">권예진</option>
+                        <option value="2">권준혁</option>
+                        <option value="3">김동식</option>
+                        <option value="4">김세진</option>
+                        <option value="5">김여정</option>
+                        <option value="6">노형준</option>
+                        <option value="7">박민선</option>
+                        <option value="8">백강현</option>
+                        <option value="9">변기현</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Add ▷" class="btn" />
+                    <input type="button" value="◁ Remove"class="btn" />
+                    <input type="button" value="Add All ▷▷" class="btn" />
+                    <input type="button" value="◁◁ Remove All" class="btn" />
+                </td>
+                <td>
+                    <h4>허용된 친구</h4>
+                    <select name="rightList" size="10"></select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

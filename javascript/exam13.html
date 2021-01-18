@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main {
+            width: 700px;
+            margin: auto;
+        }
+
+        .mainHeader {
+            border-bottom: 1px dashed #AAA;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        #box {
+            width: 550px;
+            border: 1px solid #999;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        span {
+            font-size: 7em;
+        }
+
+        .timebox {
+            font-size: 7em;
+            width: 130px;
+            border: none;
+        }
+
+        .btn {
+            border: 1px solid #AAA;
+            width: 120px;
+            height: 40px;
+            background-color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn input:disabled {
+            background-color: #999;
+            cursor: not-allowed;
+	    }
+
+    </style>
+</head>
+<body>
+    <!-- exam13.html -->
+    <div class="main">
+        <div class="mainHeader">
+            <h1>스톱워치</h1>
+            <div>각 버튼의 활성화/비활성화 제어</div>    
+        </div>
+        <div id="box">
+            <input type="text" class="timebox" name="hour" maxlength="2">
+            <span>:</span>
+            <input type="text" class="timebox" name="min" maxlength="2">
+            <span>:</span>
+            <input type="text" class="timebox" name="sec" maxlength="2">
+        </div>
+        <input type="button" value="시작" name="btnStart" class="btn">    
+        <input type="button" value="멈춤" name="btnStop" class="btn" disabled>    
+        <input type="button" value="종료" name="btnEnd" class="btn" disabled>
+    </div>
+
+    <script>
+
+        var hour = document.all.hour;
+        var min = document.all.min;
+        var sec = document.all.sec;
+        var btnStart = document.all.btnStart;
+        var btnStop = document.all.btnStop;
+        var btnEnd = document.all.btnEnd;
+        
+        sec.value = "00";
+        min.value = "00";
+        hour.value = "00";
+        
+        var n = 0;
+        var timer = 0;
+
+        btnStart.onclick = function() {
+
+            if (timer == 0) {
+                timer = setInterval(function() {
+                    sec.value = addZero(n % 100);
+                    min.value = addZero(n / 100 % 60);
+                    hour.value = addZero(n / 100 / 60);
+                    n++;
+                }, 10);
+                btnStart.disabled = true;
+                btnStop.disabled = false;
+                btnEnd.disabled = flase;
+            }
+        };
+
+
+        btnStop.onclick = function(){
+            clearInterval(timer);
+            timer = 0;
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = flase;
+        };
+
+
+        btnEnd.onclick = function() {
+            
+            clearInterval(timer);
+            timer = 0;
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = true;
+
+            sec.value = "00";
+            min.value = "00";
+            hour.value = "00";
+            n=0;
+        };
+
+        function addZero(n) {
+            return (n < 10 ? '0'+n : ''+n)
+        }
+
+    </script>
+
+</body>
+</html>

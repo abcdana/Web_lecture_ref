@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main {
+            width: 600px;
+            margin: auto;
+        }
+
+        .mainHeader {
+            border-bottom: 1px dashed #AAA;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tbl, .tbl th, .tbl tr, .tbl td {
+            border: 1px solid #888;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 0px 20px;
+        }
+
+
+        .btn {
+            display: block;
+            width: 150px;
+            height: 30px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 150px;
+            height: 280px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- exam09.html -->
+    <div class="main">
+        <div class="mainHeader">
+            <h1>셀렉트 박스 항목 관리</h1>
+            <div>셀렉트 박스의 항목을 좌,우 이동시키시오.</div>
+        </div>
+        <table class="tbl">
+            <tr>
+                <td>
+                    <h4>차단된 친구</h4>
+                    <select name="leftList" size="10">
+                        <option value="1">권예진</option>
+                        <option value="2">권준혁</option>
+                        <option value="3">김동식</option>
+                        <option value="4">김세진</option>
+                        <option value="5">김여정</option>
+                        <option value="6">노형준</option>
+                        <option value="7">박민선</option>
+                        <option value="8">백강현</option>
+                        <option value="9">변기현</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" value="Add ▷" class="btn" onclick="add();">
+                    <input type="button" value="◁ Remove"class="btn" onclick="remove();">
+                    <input type="button" value="Add All ▷▷" class="btn">
+                    <input type="button" value="◁◁ Remove All" class="btn">
+                </td>
+                <td>
+                    <h4>허용된 친구</h4>
+                    <select name="rightList" size="10"></select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+
+        var leftList = document.all.leftList;
+        var rightList = document.all.rightList;
+
+        function add() {
+            rightList.options.add(leftList.options[leftList.selectedIndex]);
+        };
+        function remove() {
+            leftList.options.add(rightList.options[rightList.selectedIndex]);
+        };
+        // function add() {
+        //     rightList.options.add(leftList.options[leftList.selectedIndex]);
+        // };
+
+    </script>
+
+</body>
+</html>

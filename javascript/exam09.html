@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main {
+            width: 600px;
+            margin: auto;
+        }
+
+        .mainHeader {
+            border-bottom: 1px dashed #AAA;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tbl {
+            width: 600px;
+            height: 150px;
+        }
+
+        .tbl, .tbl th, .tbl tr, .tbl td {
+            border: 1px solid #888;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .tbl th {
+            background-color: #EEE;
+            width: 150px;
+        }
+
+        input {
+            border: 1px solid gray;
+            font-weight: bold;
+            padding: 2px 5px;
+            font-size: 1.2em;
+            outline:none;
+        }
+
+        .bday input {
+            width: 70px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- exam09.html -->
+    <div class="main">
+        <form name="form1">
+            <div class="mainHeader">
+                <h1>회원 가입 + 폼 컨트롤 조작</h1>
+                <div>주민번호 입력 시 나머지 컨트롤(생년월일, 성별) 제어를 하시오.</div>
+            </div>
+            <table class="tbl">
+                <tr class="ssn">
+                    <th>주민번호</th>
+                    <td>
+                        <input type="text" name="ssn1" id="ssn1" size="6" maxlength="6">
+                        -
+                        <input type="text" name="ssn2" id="ssn2" size="7" maxlength="7">
+                    </td>
+                </tr>
+                <tr class="bday">
+                    <th>생년월일</th>
+                    <td>
+                        <input type="text" name="year" id="year" maxlength="4">년
+                        <input type="text" name="month" id="month" maxlength="2">월
+                        <input type="text" name="date" id="date" maxlength="2">일
+                    </td>
+                </tr>
+                <tr class="gender">
+                    <th>성별</th>
+                    <td>
+                        <!-- radio name 속성이 동일하면 둘 중 하나만 선택할 수 있다. -->
+                        <input type="radio" name="gender" id="m">남자
+                        <input type="radio" name="gender" id="f">여자
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <script>
+
+        
+        ssn1.onkeyup = function() {
+            
+            var ssn1 = document.form1.ssn1;
+            
+            var year = document.form1.year;
+            var month = document.form1.month;
+            var date = document.form1.date;
+            
+            if (ssn1.value.length == 6) {
+
+                year.value = 19 + ssn1.value.substr(0,2);
+                month.value = ssn1.value.substr(2,2);
+                date.value = ssn1.value.substr(4,2);
+            }
+            
+        };
+        
+
+        ssn2.onkeyup = function() {
+            
+            var ssn2 = document.form1.ssn2;
+            var gender = document.form1.gender;
+
+            if (ssn2.value.substr(0,1) % 2 == 0) {
+                gender[1].checked = true;
+            } else {
+                gender[0].checked = true;
+            }
+        };
+
+
+
+    </script>
+
+</body>
+</html>
