@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        fieldset {
+            margin-bottom: 30px;
+            border: 1px solid #AAA;
+            padding: 20px;
+        }
+
+        fieldset > div {
+            margin-bottom: 10px;
+        }
+
+
+
+        #tbl {
+            border: 1px solid #CCC;
+            border-collapse: collapse;
+        }
+
+        #tbl th, #tbl td {
+            border: 1px solid #CCC;
+            padding: 5px 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex26_form.html -->
+
+    <h1>***폼 + 하위 태그 제어***</h1>
+
+    <form action="" name="form1">
+
+        <fieldset>
+            <legend>텍스트 박스</legend>
+            <!-- label을 다는 두가지 방법 -->
+            <div>
+                <label for="txtName">이름 : </label>
+                <input type="text" name="txtName" id="txtName">
+            </div>
+            <div>
+                <label>
+                    나이 : 
+                    <input type="text" name="txtAge">
+                </label>
+            </div>
+            <div>
+                <input type="button" name="btn1" value="확인"> 
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>체크박스</legend>
+            <input type="checkbox" name="cb1">
+            <input type="button" value="확인" name="btn2">
+        </fieldset>
+
+
+        <hr>
+        <fieldset>
+        <h2>이용 약관</h2>
+
+        <div style="border: 1px  solid black; width: 500px; height: 200px; overflow: auto;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officiis, eum ducimus mollitia provident quisquam dolorum nemo expedita fugiat. Doloribus suscipit, inventore magnam molestiae amet beatae excepturi velit eligendi? Reprehenderit blanditiis maxime eos odio natus fugit. Dolorem, pariatur. Quia iusto totam sequi nihil adipisci quam veniam vitae ut quo aut, aliquid suscipit, praesentium alias explicabo voluptatem fugiat dolor. Accusamus quam eaque, repudiandae veritatis adipisci, illum cumque repellendus quo neque modi, autem ea dolorum est cupiditate. Earum repellat corporis modi commodi delectus illo quo aspernatur dolore pariatur suscipit ea odio officia eligendi recusandae itaque hic harum nisi iusto, cumque quaerat minus tempora voluptate quos quia! Quasi animi labore non vero pariatur eos nam amet. A rerum cum magnam ut iusto dolores commodi! Iusto quos earum aut sit, voluptatem maxime architecto ex dicta id quo eos labore nulla sequi? Temporibus dolorum soluta laborum alias modi, nostrum maiores perspiciatis consequuntur tempora saepe quam nulla inventore dolore asperiores at assumenda! Unde laboriosam minus maxime eum, illum reiciendis eligendi modi quod dolor, fuga cumque beatae vero. Eos fugit, aspernatur temporibus fugiat incidunt eum amet dicta ut itaque quidem ea eaque vero voluptatibus aliquid impedit perspiciatis hic minima repudiandae rerum sint ad cupiditate enim aperiam. Optio voluptatibus dicta quisquam hic ab ex obcaecati neque culpa deleniti dolor, eos eligendi voluptatum pariatur voluptas enim quaerat! Ratione ex, velit nesciunt magni pariatur libero, excepturi voluptatem illo id iure nemo aliquid nobis labore eum quisquam quod alias, eos dolores odio. Aperiam rerum expedita quisquam quam iste suscipit aut amet libero ad ullam adipisci assumenda sed aliquid rem, explicabo tempore sint autem corporis! Ea illo magnam incidunt dolorem sed alias mollitia libero sapiente molestiae rem officiis exercitationem quo reprehenderit deserunt impedit nesciunt, error autem non, tempore cum officia. Ducimus inventore quia fugit expedita adipisci cumque est qui totam nihil provident.
+        </div>
+
+        <input type="checkbox" name="cbAgree" id="cbAgree">
+        <label for="cbAgree">약관에 동의합니다.</label>
+        <hr>
+        <input type="button" value="다음 단계로" name="btnNext" onclick="location.href='next.html';" disabled>
+
+        <hr>
+
+        <table id="tbl">
+            <tr>
+                <th><input type="checkbox" name="cbAll"></th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbItem"></td>
+                <td>제목입니다.</td>
+                <td>홍길동</td>
+                <td>2021-01-18</td>
+            </tr>
+        </table>
+
+        </fieldset>
+    </form>
+
+    <script>
+
+        var txtName = document.form1.txtName;
+        var txtAge = document.form1.txtAge;
+        var btn1 = document.form1.btn1;
+
+        var cb1 = document.form1.cb1;
+        var btn2 = document.form1.btn2;
+
+        var cbAgree = document.form1.cbAgree;
+        var btnNext = document.form1.btnNext;
+
+        var cbAll = document.form1.cbAll; //태그 1개 -> 단일 객체
+        var cbItem = document.form1.cbItem; //태그 여러개 -> 배열로 반환
+        // alert(cbItem.length);
+
+
+        btn1.onclick = function() {
+
+            // txtName.size = 50;
+            // txtName.value = "홍길동";
+            // txtName.readOnly = "readonly";
+
+            // 텍스트박스 + JavaScript
+
+            //이름
+            // - 필수값
+            // - 2~5자 이내
+            // - 한글
+
+            // 사용자가 스페이스를 눌렀을 수 있으므로 습관적으로 trim()을 해주는 것이 좋다.
+            if (txtName.value.trim() == "") {
+                alert("이름을 반드시 입력하세요.");
+                txtName.focus();
+                return; // 빈 리턴문 -> 메소드 종료하는 용도
+            }
+
+            if (txtName.value.trim().length < 2 || txtName.value.trim().length > 5) {
+                alert("이름은 2~5자 이내로 입력하세요.");
+                
+                //1.
+                // txtName.focus(); // 텍스트 박스에 포커스 맞추기
+                
+                //2.
+                // txtName.value = ""; //텍스트 박스 값 지우기
+                // txtName.focus(); // 텍스트 값 지우고 포커스 맞추기
+                
+                //3.
+                txtName.select(); // 텍스트값 전체 선택 하기 (드래그)
+                return;
+            } 
+
+
+            for (var i=0; i<txtName.value.trim().length; i++) {
+                var c = txtName.value.trim().charAt(i);
+                //alert(c);
+                if (c < '가' || c > '힣') {
+                    alert("이름은 한글로 입력하세요.");
+                    txtName.select();
+                    return;
+                }
+            }
+
+
+            //나이
+            // - 필수값
+            // - 숫자(형식)
+            // - 범위
+            if (txtAge.value.trim() == "") {
+                alert("나이를 반드시 입력하세요.");
+                txtAge.focus();
+                return;
+            }
+
+            if (isNaN(txtAge.value)) {
+                alert("나이는 숫자로 입력하세요.");
+                txtAge.select();
+                return;
+            }
+
+            if (txtAge.value < 19 || txtAge.value > 60) {
+                alert("나이는 19세 이상 60세 이하로 입력하세요.");
+                txtAge.select();
+                return;
+            }
+            
+            alert("성공!!!"); // 서버로 전송하는 업무
+
+        };
+        
+
+        //체크박스 + JavaScript
+        // - value
+        // - checked
+        // - onclick
+        // - onchanged
+        
+        btn2.onclick = function() {
+                // alert(cb1.checked); //체크박스의 현재상태
+                // cb1.checked = false;
+                cb1.checked = !cb1.checked;
+        };
+
+        // cb1.onclick = function() {
+        //     console.log(cb1.checked);
+        // };
+
+        // 컨트롤의 값이 변화할 때 발생하는 이벤트
+        cb1.onchange = function() {
+            console.log(cb1.checked);
+        };
+
+
+        
+        cbAgree.onchange = function() {
+            //alert(cbAgree.checked);
+            if (cbAgree.checked) {
+                //약관 동의O
+                btnNext.disabled = false;
+            } else {
+                btnNext.disabled = true;
+            }
+        };
+
+
+        cbAll.onchange = function() {
+            
+            if (cbAll.checked) {
+                for (var i=0; i<cbItem.length; i++) {
+                    cbItem[i].checked = true;
+                } 
+            } else {
+                cbItem[i].checked = false;
+            }
+
+            // 더 간결하게 만든 코드
+            for (var i=0; i<cbItem.length; i++) {
+                cbItem[i].checked = cbAll.checked;
+            }  
+        };
+      
+
+    </script>
+
+
+</body>
+</html>
