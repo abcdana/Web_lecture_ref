@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset { width: 250px; }
+        fieldset > div { margin: 5px; }
+
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 400px;
+            height: 20px;
+            margin-left: 2px;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex33_content.html -->
+
+    <h1>테이블</h1>
+
+    <fieldset>
+        <legend>색상 입력</legend>
+        <div><label>색상 : <input type="color" id="txtColor"></label></div>
+        <div><label>이름 : <input type="text" id="txtName"></label></div>
+        <div><input type="button" value="추가하기" id="btnAdd"></div>
+    </fieldset>
+
+    <table id="tbl1">
+        <thead>
+            <tr>
+                <th>색상명</th>
+                <th>미리보기</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1">
+            <tr>
+                <td>자주색</td>
+                <td bgcolor="#EC45AC">#EC45AC</td>
+            </tr>
+            <tr>
+                <td>회색</td>
+                <td bgcolor="#EEEEEE">#EEEEEE</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        
+        var txtColor = document.getElementById("txtColor");
+        var txtName = document.getElementById("txtName");
+        var btnAdd = document.getElementById("btnAdd");
+        var tbody1 = document.getElementById("tbody1");
+
+        //1. 버튼 클릭 -> 행 추가
+        //2. 추가 후 -> fieldset -> 초기화
+        //3. 색상명 입력 후 엔터 -> 행 추가 (1번 동일)
+
+        btnAdd.onclick = function() {
+            
+            var temp = "";
+
+            tbody1.innerHTML = ""; 
+
+            <tr><td>자주색</td><td bgcolor="#EC45AC">#EC45AC</td></tr>
+
+
+        };
+
+    </script>
+
+</body>
+
+</html>
