@@ -17,9 +17,15 @@
             border: 5px solid tomato;
         }
     </style>
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
 </head>
 <body>
+
     <!-- ex34_axis.html -->
+
+    <button><i class="fas fa-dog"></i></button>
 
     <div id="n1">
         할아버지
@@ -68,6 +74,17 @@
             // - Axis
             // - 나***를 기준으로 다른 태그를 검색하는 도구
 
+
+            // - children(childNodes)
+            // - firstElementChild(firstChild)
+            // - lastElementChild(lastChild)
+
+            // - parentElement(parentNode)
+
+            // - previousElementSibling(previousSibling)
+            // - nextElementSibling(nextSibling)
+
+
             //나
             var n7 = document.getElementById("n7");
 
@@ -81,7 +98,7 @@
                 //노드 (Node)
                 // - DOM 트리 구조의 구성 요소
                 //1. nodeType
-                // - 태그(1), 속성(2), PCDATA(3), 주석(8), 선언문(13)
+                // - 태그(1), 속성(2), PCDATA(3), 주석(8), 문서객체(document, 9), 선언문(13)
                 //2. nodeName
                 // - 태그(태그명), 속성(속성명), 나머지(#XXX)
                 //3. nodeValue
@@ -118,8 +135,86 @@
 
         };
 
+        // document.getElementById("btn1").onclick = function(){
+
+        //     var n7 = document.getElementById("n7");
+
+        // };
+
         
-        document.
+        document.getElementById("btn1").onclick = function(){
+
+            var n7 = document.getElementById("n7");
+
+            //자식들(모든 구성 요소를 포함)
+            // - childNodes
+            // - firstChild
+            // - lastChild
+
+            //자식들(태그들만 포함) -> 이 위주로 연습하는것이 실용성이 높다.
+            // - children
+            // - firstElementChild
+            // - lastElementChild
+            console.log(n7.firstChild.nodeType);
+            console.log(n7.firstElementChild.nodeType);
+
+            // n7.firstElementChild.className = "check"; //첫째
+            // n7.lastElementChild.className = "check"; //막내
+            // n7.children[0].className = "check"; //첫째 첫째
+            // n7.children[2].className = "check"; //막내 셋째
+            // n7.children[n7.children.length-1].className = "check"; //막내 (길이-1)
+
+            //손자
+            n7.children[1].children[0].className = "check";
+
+        };
+
+
+
+        document.getElementById("btn1").onclick = function() {
+
+            var n7 = document.getElementById("n7");
+
+            //부모 노드
+            // - parentNode
+            // - parentElement
+            // n7.parentElement.className = "check";
+            // n7.parentElement.parentElement.className = "check";
+            // n7.parentElement.parentElement.parentElement.className = "check";
+            // n7.parentElement.parentElement.parentElement.parentElement.className = "check";
+            // n7.parentElement.parentElement.parentElement.parentElement.parentNode.className = "check";
+
+            console.log(n7.parentElement.parentElement.parentElement.parentElement.parentNode.nodeType);
+            console.log(n7.parentElement.parentElement.parentElement.parentElement.parentNode == document);
+            console.log(n7.parentElement.parentElement.parentElement.parentElement.parentNode === document);
+            // -> HTML보다 위에 있는 것이 document(문서객체)이다.
+            // -> BOM에서는 document위에 window객체가 존재하지만 DOM에서는 document가 최상위 객체이다.
+
+        };
+
+
+        document.getElementById("btn1").onclick = function() {
+            
+            var n7 = document.getElementById("n7");
+
+            //형제 탐색
+            // n7.parentNode.children[0].className = "check"; //형
+            // n7.parentNode.children[2].className = "check"; //동생
+
+            // 사촌 탐색 
+            // n7.parentNode.parentNode.children[0].children[0].className = "check"; //큰아빠 자식
+
+            //형
+            // n7.previousSibling //모든 노드
+            // n7.previousElementSibling //태그만
+            n7.previousElementSibling.className = "check";
+            
+            //동생
+            // n7.nextSibling
+            // n7.nextElementSibling
+            n7.nextElementSibling.className = "check";
+
+        };
 
     
 

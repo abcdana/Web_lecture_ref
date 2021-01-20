@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 { border: 1px solid black; border-collapse: collapse; }
+        #tbl1 td { border: 1px solid black; padding: 5px 20px; }
+        /* 고청 크기를 만들 땐, table에 width 
+            가변적인 크기를 만들 땐, td에 padding */
+
+        #box1 {
+            border: 1px solid black;
+            padding: 50px;
+            background-color: tomato;
+        }
+
+        #box2 {
+            border: 1px solid black;
+            padding: 50px;
+            background-color: gold;
+        }
+
+        #box3 {
+            border: 1px solid black;
+            padding: 50px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex35_event.html -->
+
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border>
+        <tr>
+            <td>aaa</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>이벤트 버블링(Bubbling) vs 이벤트 터널링(Tunneling) (= 이벤트 캡쳐링(Capturing))</h1>
+
+    <div id="box1">할아버지
+        <div id="box2">아버지
+            <div id="box3">자식</div>
+        </div>
+    </div>
+
+    <script>
+
+
+        //tr 찾기
+        //m1. 문제점 : 내가 원하는 td만을 찾을 수 없다. -> 사용 불가
+        var tr = document.getElementsByTagName("tr");
+        // console.log(tr.length); //아래의 tr까지 나와서 21개가 나옴
+        
+        //m2.
+        var tbl1 = document.getElementById("tbl1");
+        // console.log(tbl1.children.length); //-> tbody의 길이 : 1
+        var tbody = tbl1.firstElementChild;
+        var tr = tbody.children;
+        // console.log(tr.length);
+
+        // for (var i=0; i<tr.length; i++) {
+        //     var td = tr[i].children;
+        //     // console.log(td.length); //tr이 각각 5개의 td를 가지고 있습니다.
+
+        //     for (var j=0; j<td.length; j++) {
+        //         td[j].innerText = i * j;
+        //         td[j].onmouseover = function() {
+        //             event.srcElement.bgColor = "gold";
+        //         };
+        //         td[j].onmouseout = function() {
+        //             event.srcElement.bgColor = "transparent";
+        //         };
+        //     }
+        // }
+
+        for (var i=0; i<tr.length; i++) {
+
+            tr[i].onmouseover = function() {
+                //event.srcElement.bgColor = "tomato";  //td
+                event.srcElement.parentNode.bgColor = "tomato";  //tr
+            };
+
+            tr[i].onmouseout = function() {
+                // event.srcElement.bgColor = "transparent";
+                event.srcElement.parentNode.bgColor = "transparent";  //tr
+            };
+        }
+
+
+        
+        //이벤트 버블링(Bubbling) vs 이벤트 터널링(Tunneling) (= 이벤트 캡쳐링(Capturing))
+
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+        var box3 = document.getElementById("box3");
+
+        
+        //부모 태그에 걸어놓은 이벤트는 자식 영역에서도 발생한다.
+        box1.onclick = function() {
+            alert("할아버지");
+        };
+        
+        //부모 영역에서 이벤트가 발생해도 그 영역이 자식 영역과 겹치는 부분이면 event srcElement는 자식 객체가 된다.
+        box2.onclick = function() {
+            alert("아버지");
+            event.cancelBubble = true;
+            //alert(event.srcElement.id);
+        };
+        
+        box3.onclick = function() {
+            alert("자식");
+            event.cancelBubble = true;
+            //alert(event.srcElement.id);
+        };
+
+        // event.srcElement는 이벤트가 발생했을 때, 최하위에 있는 객체입니다. 
+
+
+    </script>
+
+</body>
+</html>
