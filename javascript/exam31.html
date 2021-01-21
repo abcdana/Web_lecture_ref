@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #cat {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- exam31.html -->
+
+    <h1>고양이 움직이기</h1>
+    <div id="desc">고양이를 마우스 클릭한 장소로 이동시키시오.</div>
+    <img src="../images/catty01.png" name="cat" id="cat">
+
+    <script>
+
+        var cat = document.getElementById("cat");
+
+        // console.log(cat.style.width);
+        // console.log(cat.style.width === undefined);
+        // console.log(cat.style.width === "");
+
+        window.onmousedown = function() {
+            cat.style.left = event.clientX - 64 + "px";
+            cat.style.top = event.clientY - 64 + "px";
+            cat.style.transition = "all .8s";
+            cat.style.transitionTimingFunction = "linear";
+        };
+
+    </script>
+
+</body>
+</html>

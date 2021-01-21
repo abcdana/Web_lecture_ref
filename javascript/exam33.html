@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cat {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- exam33.html -->
+    <div class="main m800">
+        <div class="mainHeader">
+            <h1>이미지 + 연속 이동하기</h1>
+            <div>마우스의 움직임을 따라 고양이를 연속으로 움직이시오.</div>
+            <div class="code"></div>
+        </div>
+        <img src="../images/catty01.png" alt="" class="cat" id="cat01">
+        <img src="../images/catty02.png" alt="" class="cat" id="cat02">
+        <img src="../images/catty03.png" alt="" class="cat" id="cat03">
+        <img src="../images/catty04.png" alt="" class="cat" id="cat04">
+        <img src="../images/catty05.png" alt="" class="cat" id="cat05">
+        <img src="../images/catty06.png" alt="" class="cat" id="cat06">
+        <img src="../images/catty07.png" alt="" class="cat" id="cat07">
+        <img src="../images/catty08.png" alt="" class="cat" id="cat08">
+        <img src="../images/catty09.png" alt="" class="cat" id="cat09">
+        <img src="../images/catty10.png" alt="" class="cat" id="cat10">
+        <img src="../images/catty11.png" alt="" class="cat" id="cat11">
+        <img src="../images/catty12.png" alt="" class="cat" id="cat12">
+        <img src="../images/catty13.png" alt="" class="cat" id="cat13">
+        <img src="../images/catty14.png" alt="" class="cat" id="cat14">
+        <img src="../images/catty15.png" alt="" class="cat" id="cat15">
+        <img src="../images/catty16.png" alt="" class="cat" id="cat16">
+        <img src="../images/catty17.png" alt="" class="cat" id="cat17">
+        <img src="../images/catty18.png" alt="" class="cat" id="cat18">
+        <img src="../images/catty19.png" alt="" class="cat" id="cat19">
+        <img src="../images/catty20.png" alt="" class="cat" id="cat20">
+        <img src="../images/catty21.png" alt="" class="cat" id="cat21">
+    </div>
+
+    <script>
+
+        // var n = 1;
+
+        // window.onmousemove = function() {
+            
+        //     var x = event.clientX;
+        //     var y = event.clientY;
+            
+        //     if (n < 10) {
+        //         n = "0" + n;
+        //         document.getElementById("cat" + n).style.left = x - 64 + "px";
+        //         document.getElementById("cat" + n).style.top = y - 64 + "px";
+        //     } else {
+        //         document.getElementById("cat" + n).style.left = x - 64 + "px";
+        //         document.getElementById("cat" + n).style.top = y - 64 + "px";
+        //     }
+
+        //     n++;
+
+        //     if (n > 21) n = 1;
+        // };
+
+        var cat = document.getElementsByClassName("cat");
+        
+        let pathX = [];
+        let pathY = [];
+
+        window.onmousemove = function () {
+
+            var x = event.clientX;
+            var y = event.clientY;
+            var z = 21;
+
+            pathX.push(event.clientX);
+            pathY.push(event.clientY);
+            
+            for (var i=0; i<cat.length; i++) {
+                cat[i].style.left = pathX[i] - 64 + "px";
+                cat[i].style.top = pathY[i] - 64 + "px";
+                cat[i].style.zIndex = z;
+                z--;
+            };
+
+            if (pathX.length == 21) {
+                pathX.shift();
+                pathY.shift();
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

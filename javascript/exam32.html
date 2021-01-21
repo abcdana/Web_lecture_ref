@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #cat {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>고양이 움직이기</h1>
+    <div id="desc">고양이를 마우스 경로를 따라 움직이시오.</div>
+    <img src="../images/catty01.png" name="cat" id="cat">
+    <hr>
+    <input type="button" value="시작" name="btn" id="btn">
+
+    <script>
+
+        // 현재 Ctrl key를 누르고 있는지 확인? true / false
+        // console.log(event.ctrlKey);
+        
+        let x = [];
+        let y = [];
+
+        window.onmousemove = function() {
+
+            if (event.ctrlKey) {
+                
+                x.push(event.clientX);
+                y.push(event.clientY);
+                
+            }
+
+        };
+
+        btn.onclick = function() {
+
+            var timer = setInterval( function() {
+                cat.style.left = x.shift() + "px";
+                cat.style.top = y.shift() + "px";
+
+                if (x.length == 0) {
+                    clearInterval(timer);
+                }
+            }, 10);
+
+        };
+
+        
+
+    </script>
+
+</body>
+</html>
