@@ -70,8 +70,8 @@
                 <td>
                     <input type="button" value="Add ▷" class="btn" onclick="add();">
                     <input type="button" value="◁ Remove"class="btn" onclick="remove();">
-                    <input type="button" value="Add All ▷▷" class="btn">
-                    <input type="button" value="◁◁ Remove All" class="btn">
+                    <input type="button" value="Add All ▷▷" class="btn" onclick="addAll();">
+                    <input type="button" value="◁◁ Remove All" class="btn" onclick="removeAll();">
                 </td>
                 <td>
                     <h4>허용된 친구</h4>
@@ -93,9 +93,15 @@
         function remove() {
             leftList.options.add(rightList.options[rightList.selectedIndex]);
         };
-        // function add() {
-        //     rightList.options.add(leftList.options[leftList.selectedIndex]);
-        // };
+        
+        function addAll() {
+            for (let i=0; i<9; i++) {
+                rightList.options.add(leftList.options[i]);
+            }
+        };
+        function removeAll() {
+            rightList.options.add(leftList.options[leftList]);
+        };
 
     </script>
 
