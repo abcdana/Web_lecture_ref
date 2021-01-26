@@ -31,7 +31,7 @@ console.log(300);
 var a = 10;
 var a = 20;
 
-console.log(a);
+console.log(a); //20
 
 function m1() {
     var b = 30;
@@ -39,12 +39,12 @@ function m1() {
     console.log(b);
 }
 
-m1();
+m1(); //40
 
-console.clear();
+// console.clear();
 
 let b = 10;
-console.log(b);
+console.log(b); //10
 
 // let b = 20; //SyntaxError: Identifier 'b' has already been declared
 // console.log(b);
@@ -60,7 +60,7 @@ if (true) {
 
 
 const d = 100;
-console.log(d);
+console.log(d); //
 
 // d = 200;  //Uncaught TypeError: Assignment to constant variable.
 console.log(d);

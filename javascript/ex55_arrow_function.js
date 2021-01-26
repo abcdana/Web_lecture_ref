@@ -1,6 +1,6 @@
 //ex55_arrow_function.js
 
-//화살표 함수, Arrow Funcion
+//화살표 함수, Arrow Function
 // - 자바의 람다와 유사
 
 //1. 함수 선언문

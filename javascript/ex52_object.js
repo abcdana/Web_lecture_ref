@@ -101,7 +101,7 @@ console.log(lee["name"]); //불편하고, 조작성 좋음
 
 
 
-//객체 만들기
+//객체 만들기1
 var s1 = new Object();
 
 s1.name = "홍길동";

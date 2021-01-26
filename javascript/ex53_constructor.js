@@ -14,7 +14,7 @@ var user = {
 };
 
 var user2 = {
-    nam: "홍길동",
+    name: "홍길동",
     hello: function() {
         console.log(this.name);
     }
