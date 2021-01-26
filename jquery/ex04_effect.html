@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box { width: 200px; height: 200px; border: 1px solid black; background-color: gold; }
+
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+
+        //window.onload = function() {
+        
+        //};
+
+        //jQuery("#btn1")
+        //$("#btn1")
+
+        $(document).ready(function() {
+            
+            //jQuery Effect Function
+            //1. hide(time), show(time), toggle(time)
+            //2. fadeOut(), fadeIn(), fadeToggle()
+            //3. slideUp(), slideDown(), slideToggle()
+            //4. animate() : 사용자 정의
+
+
+            $("#btn1").click(function() {
+                //$("#box").hide("slow"); //.6s
+                //$("#box").fadeOut(1000);
+                // $("#box").slideUp(1000); 
+
+                // //객체로 매개변수 넘기기
+                // var obj = {
+                //     name: "홍길동",
+                //     age: 20,
+                //     hello: function() {}
+                // };
+
+                // //JDBD의 DTO와 비슷. 순서는 바뀌어도 상관없다.
+                // var obj = {
+                //     age: 20,
+                //     name: "홍길동",
+                //     hello: function() {}
+                // };
+
+                // function a1(name, age) {}
+                // function a2(obj) {}
+
+                // $("#box").animate({
+                //     width: "400px",
+                //     height: 300, //자바스크립트의 기본단위 : px
+                //     opacity: 0
+                // });
+
+                // $("#box").animate({
+                //     // box.style.width = parseInt(box.style.width) + 100 + "px"; //원래는 이런 형식으로 조작해야 함
+                //     width: "+=100px", //문자열로 만들면 다 된다..? wow제이쿼리 만세
+                //     // margin-left: "+=50px" //안되는 이유 '-'가 들어가있다.
+                //     "margin-left": "+=50px", //처리방법1
+                //     marginLeft: "+=50px" //처리방법2
+                // }, 2000);
+
+                // $("#box").animate({
+                //     width: "toggle",
+                //     height: "toggle",
+                //     "font-size": "toggle"
+                // }, 1000);
+
+
+                //같은 작업
+                //ver1
+                $("#box").hide(3000);
+
+                // $(document.body)
+                setTimeout(function() {
+                    $("body").css("background-color", "black");
+                }, 3000);
+
+            });
+
+            $("#btn2").click(function() {
+                //$("#box").show("fast"); //.4s
+                //$("#box").fadeIn(1000);
+                // $("#box").slideDown(1000);
+
+                //ver2
+                $("#btn").hide(3000, function(){
+                    //콜백 함수(Callback) - 시스템이나 환경이 호출하는 함수
+                    // $("body").css("background-color", "black");
+                    location.href = "http://google.com";
+
+                });
+
+            });
+
+            $("#btn3").click(function() {
+               //$("#box").toggle(2000);
+               //$("#box").fadeToggle(1000);
+            //    $("#box").slideToggle(1000);
+
+                //대부분의 jQuery 함수는 객체 자신을 반환한다.
+
+                var temp = $("#box").css("color", "white");
+                var temp2 = temp.css("background-color", "gray");
+                temp2.css("border-width", "10px");
+
+                //메소드 체인 형태
+                $("#box").css("color", "yellow")
+                         .css("background-color", "tomato")
+                         .css("border-width", "10px");
+                
+                //위 아래 동일 코드
+                $("#box").css("color", "yellow");
+                $("#box").css("background-color", "tomato");
+                $("#box").css("border-width", "10px");
+
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <!-- ex04_effect.html -->
+
+    <h1>jQuery Effect</h1>
+
+    <input type="button" value="확인" id="btn1">
+    <input type="button" value="확인" id="btn2">
+    <input type="button" value="확인" id="btn3">
+
+    <hr>
+
+    <div id="box">상자</div>
+
+    나머지 내용물입니다.
+
+</body>
+</html>

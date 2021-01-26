@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="js/jquery-1.12.4.js"></script>
+
+</head>
+<body>
+    <!-- ex03_event.html -->
+
+    <!--
+
+        JavaScript
+        - 순수 JavaScript > Vanilla-JS
+
+    -->
+
+    <h1>jQuery Event</h1>
+
+    <input type="button" value="확인" name="btn1" id="btn1" class="btn">
+    <input type="button" value="확인" name="btn2" id="btn2" class="btn">
+    <input type="button" value="확인" name="btn3" id="btn3" class="btn">
+    <input type="button" value="확인" name="btn4" id="btn4" class="btn">
+    <input type="button" value="확인" name="btn5" id="btn5" class="btn">
+
+    <script>
+
+        //1. BOM - 정적
+        //<input onclick="">
+
+        //2. BOM - 동적
+        //document.all.btn1.onclick = function() {};
+
+        //3. DOM
+        //function m1() {
+        //    alert(100);
+        //};
+        
+        //document.getElementById("btn1").addEventListener("click", m1);
+        //document.getElementById("btn1").removeEventListener("click", m1);
+
+
+        /*
+        
+            jQuery 함수 형태
+            1. 전용 함수
+                a. obj.test()       //getter, 읽기
+                b. obj.test(param)  //setter, 쓰기
+
+            2. 범용 함수
+                a. obj.test(param)          //getter, 읽기
+                b. obj.test(param,param)    //setter, 쓰기
+        
+        */
+
+        // alert(jQuery("#btn11").val());
+        // jQuery("#btn1").val("Check");
+
+        jQuery("#btn1").css("color", "blue");
+
+        //4. jQuery
+        //  a. 전용 이벤트 함수
+        //     - 객체.이벤트함수(함수)
+        //     - 가독성이 높고, 코드가 간결한 반면 딱딱하다.
+        //  b. 범용 이벤트 함수
+        //     - 객체.bind("이벤트명", 함수)
+        //     - 객체.live("이벤트명", 함수)
+        //     - 객체.on("이벤트명", 함수) ** 사용
+        //     - 가독성이 낮고, 코드가 긴 반면 유연하다.
+
+        // btn1.onclick = function() {
+
+        // };
+
+        // jQuery("#btn1").click(function() {
+        //     alert();
+        // });
+
+        // jQuery("#btn1").on("click", function() {
+        //     alert();
+        // });
+
+
+        jQuery(".btn").click(function(){
+            //jQuery로 매핑한 이벤트를 발생시킨 주체가 누구??
+            //1. event.srcElement
+            //2. this
+            alert(event.srcElement.id);
+            alert(this.id);
+
+            //ex]누른 버튼의 글자색 변경
+            // this.style.color = "blue";
+
+            객체.css("color", "blue"); //jQuery로 event를 걸었으면 처리도 jQuery로 해라.
+            //BOM(DOM) 객체 -> (변환) -> jQuery 객체
+            //this -> jQuery 객체
+
+            //this.css("color", "blue");
+            jQuery(this).css("color", "blue");
+
+        });
+        
+
+
+
+    </script>
+
+</body>
+</html>
