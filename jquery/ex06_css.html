@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            border: 20px solid cornflowerblue;
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            margin: 50px;
+            background-color: thistle;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+
+</head>
+<body>
+    <!-- ex06_css.html -->
+
+    <h1>jQuery + CSS</h1>
+
+    <input type="button" value="확인" id="btn1">
+    <hr>
+    <div id="box">상자</div>
+
+    <script>
+
+        $("#btn1").click(function() {
+
+            //상자의 너비와 높이는??
+
+            //DOM
+            //console.log("DOM:", document.getElementById("box").style.width);
+            //console.log("DOM:", getComputedStyle(document.getElementById("box")).width); //*********
+
+            //1.
+            console.log("width:", $("#box").css("width"));
+            console.log("height:", $("#box").css("height"));
+
+            //2.
+            console.log("width():", $("#box").width());
+            console.log("height():", $("#box").height());
+
+            // $("#box").css("width", "150px");
+            // $("#box").height(150);
+
+
+            //3. width + padding = 노랑색 영역
+            console.log("innerWidth():", $("#box").innerWidth());
+            console.log("innerHeight():", $("#box").innerHeight());
+
+            //4. width + padding + border = 노랑색 영역 + 파랑색 테두리
+            // -> 시각적으로 출력된 실제 상자의 크기
+            console.log("outerWidth():", $("#box").outerWidth());
+            console.log("outerHeight():", $("#box").outerHeight());
+
+            //5. width + padding + border + margin
+            // -> 상자가 실제 차지하는 영역
+            console.log("outerWidth(true):", $("#box").outerWidth(true));
+            console.log("outerHeight(true):", $("#box").outerHeight(true));
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>

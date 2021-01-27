@@ -98,26 +98,46 @@
             });
 
             $("#btn3").click(function() {
-               //$("#box").toggle(2000);
-               //$("#box").fadeToggle(1000);
-            //    $("#box").slideToggle(1000);
+              
+                // $("#box").toggle(2000);
+                // $("#box").fadeToggle(1000);
+                // $("#box").slideToggle(1000);
 
                 //대부분의 jQuery 함수는 객체 자신을 반환한다.
 
-                var temp = $("#box").css("color", "white");
-                var temp2 = temp.css("background-color", "gray");
-                temp2.css("border-width", "10px");
+                // var temp = $("#box").css("color", "white");
+                // var temp2 = temp.css("background-color", "gray");
+                // temp2.css("border-width", "10px");
 
-                //메소드 체인 형태
-                $("#box").css("color", "yellow")
-                         .css("background-color", "tomato")
-                         .css("border-width", "10px");
+                // //메소드 체인 형태
+                // $("#box").css("color", "yellow")
+                //          .css("background-color", "tomato")
+                //          .css("border-width", "10px");
                 
-                //위 아래 동일 코드
-                $("#box").css("color", "yellow");
-                $("#box").css("background-color", "tomato");
-                $("#box").css("border-width", "10px");
+                // //위 아래 동일 코드
+                // $("#box").css("color", "yellow");
+                // $("#box").css("background-color", "tomato");
+                // $("#box").css("border-width", "10px");
 
+
+                $("#box")
+                    .hide(2000)
+                    .show(2000);
+
+                //$("#box").hide(2000);
+                //alert();
+                //$("#box").show(2000);
+
+
+                // $("#box")
+                //     .hide(2000)
+                //     .show(2000)
+                //     .slideUp(1000)
+                //     .slideDown(1000);
+
+                $("#box").stop();
+
+                    
             });
 
         });
