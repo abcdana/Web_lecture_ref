@@ -12,21 +12,35 @@
     <script src="js/jquery-1.12.4.js"></script>
     <script>
 
-        //window.onload = function() {
-        
-        //};
+        // window.onload = function() {
+        //     $("#btn1").click(function() {
+        //         alert();
+        //     });        
+        // };    
 
-        //jQuery("#btn1")
-        //$("#btn1")
+        // jQuery("#btn1")
+        // $("#btn1")
+        
 
         $(document).ready(function() {
             
             //jQuery Effect Function
-            //1. hide(time), show(time), toggle(time)
-            //2. fadeOut(), fadeIn(), fadeToggle()
-            //3. slideUp(), slideDown(), slideToggle()
-            //4. animate() : 사용자 정의
+            // 1. hide(time), show(time), toggle(time)
+            // 2. fadeOut(), fadeIn(), fadeToggle()
+            // 3. slideUp(), slideDown(), slideToggle()
+            // 4. animate() : 사용자 정의
 
+            $("#btn1").click(function() {
+                $("#box").hide(2000);
+            });
+
+            $("#btn1").click(function() {
+                $("#box").show(2000);
+            });
+
+            $("#btn1").click(function() {
+                $("#box").toggle(2000);
+            });
 
             $("#btn1").click(function() {
                 //$("#box").hide("slow"); //.6s
