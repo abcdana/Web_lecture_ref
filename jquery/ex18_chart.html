@@ -4,13 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/jquery-ui.js"></script>
+
+    <script src="js/highcharts.js"></script>
+    <script src="js/series-label.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/export-data.js"></script>
+    <script src="js/accessibility.js"></script>
+
+    <style>
+
+        #container {
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+
+    </style>
 
 </head>
 <body>
-    
+    <!-- ex18_chart.html -->
+
+    <!--  
+
+        Charts
+        1. HighChart
+        2. Google Chart
+
+    -->
+
+    <h1>Chart</h1>
+
+    <div id="container"></div>
+
+
+    <script type="text/javascript">
+        Highcharts.chart('container', {
+        
+            title: {
+                text: '2020년 체중 변화'
+            },
+        
+            subtitle: {
+                text: '1년간의 몸무게 변화를 측정합니다.'
+            },
+        
+            yAxis: {
+                title: {
+                    text: '체중(kg)'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 2010 to 2017'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical', //horizontal
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 1
+                }
+            },
+        
+            series: [
+                {
+                    name: '홍길동',
+                    data: [70, 71, 72, 73, 75, 74, 75, 73, 72, 71, 73, 74]
+                },
+                {
+                    name: '아무개',
+                    data: [60, 61, 62, 63, 65, 66, 67, 65, 68, 67, 61, 64]
+                },
+                {
+                    name: '호호호',
+                    data: [70, 69, 68, 67, 72, 75, 76, 70, 72, 71, 70, 68]
+                }
+            ],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    </script>
+
 </body>
 </html>
