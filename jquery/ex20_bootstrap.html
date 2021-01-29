@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+    body {
+        margin-bottom: 200px;
+    }
+
+    #p1 > .glyphicon {
+        /* width, height로 늘리는거 아님. 아무리 건드려도 크기 안늘어남
+            영역의 크기는 늘어나지만 아이콘의 크기는 늘어나지 않는다.
+            -> 아이콘은 폰트기 때문에 폰트사이즈를 조정해야함 */
+        font-size: 5em;
+        margin-left: 30px;
+        color: cornflowerblue;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- ex20_bootstrap.html -->
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Bootstrap <small>example</small></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam odio amet fugit eos dolores, ex deserunt aut aperiam delectus exercitationem officiis itaque at. Natus nobis suscipit unde commodi tempora totam assumenda facilis eos quam blanditiis ratione magnam placeat quis illum</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>Wells</h2>
+
+        <div class="well well-sm">소규모 + 독립된 영역</div>
+        <div class="well">소규모 + 독립된 영역</div>
+        <div class="well well-lg">소규모 + 독립된 영역</div>
+
+
+        <h2>Alert</h2>
+
+        <div class="alert alert-success">Well과 유사 + 좀 더 강조</div>
+        <div class="alert alert-info">Well과 유사 + 좀 더 강조</div>
+        <div class="alert alert-danger">Well과 유사 + 좀 더 강조</div>
+        <div class="alert alert-warning">Well과 유사 + 좀 더 강조</div>
+        <div class="alert alert-success">
+            <Strong>Bootstrap</Strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis sed vero odit. Qui exercitationem a reprehenderit eligendi necessitatibus sunt repellat!
+        </div>
+        <!-- 둘 다 글 상자 같은거라고 보면 된다. -->
+
+
+        <h2>아이콘</h2>
+        
+        <!-- http://bootstrap.com/ -> components -> Glyphicons -->
+        <!-- CSS로 위에서 조작해보자 -->
+        <p id="p1">
+            <span class="glyphicon glyphicon-heart"></span>
+            <span class="glyphicon glyphicon-leaf"></span>
+            <span class="glyphicon glyphicon-fire"></span>
+        </p>
+
+        <p>
+            <button class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>
+                Delete
+            </button>
+        </p>
+
+
+        <h2>Badges</h2>
+
+        <ul>
+            <li>Java</li>
+            <li>Oracle <span class="badge">10</span></li>
+            <li>JDBC</li>
+            <li>Spring <span class="badge">5</span></li>
+        </ul>
+
+        <p>
+            <button class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>
+                Delete
+                <span class="badge">3</span>
+            </button>
+        </p>
+
+
+        <h2>Label</h2>
+
+        <p>Lorem ipsum dolor sit amet. <span class="label label-default">new</span></p>
+        <p>Lorem ipsum dolor sit amet. <span class="label label-primary">new</span></p>
+        <p>Lorem ipsum dolor sit amet. <span class="label label-success">new</span></p>
+        <p>Lorem ipsum dolor sit amet. <span class="label label-info">new</span></p>
+        <p>Lorem ipsum dolor sit amet. <span class="label label-warning">new</span></p>
+        <p>Lorem ipsum dolor sit amet. <span class="label label-danger">new</span></p>
+
+    </div>
+</body>
+</html>
