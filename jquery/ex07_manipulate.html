@@ -22,32 +22,31 @@
     <script>
 
         
+        //태그 조작 > 컨텐츠 조작
+        // 1. innerText, textContent > text()
+        // 2. innerHTML > html()
+        // 3. value > val()
 
         $("#btn1").click(function() {
 
-            //태그 조작 > 컨텐츠 조작
-            //1. innerText, textContent > text()
-            //2. innerHTML > html()
-            //3. value > val()
+            // alert($("#box1").text());
+            // $("#box1").text("안녕하세요.");
+            // $("#box1").text("<b>안녕</b>하세요.");
 
-            //alert($("#box1").text());
-            //$("#box1").text("안녕하세요.");
-            //$("#box1").text("<b>안녕</b>하세요.");
-
-            //$("#box1").html("<b>안녕</b>하세요.");
+            // $("#box1").html("<b>안녕</b>하세요.");
 
             //alert($("#txt1").val());
             //$("#txt1").val(new Date());
 
             
             //태그 조작 > 속성 조작
-            //1. BOM
+            // 1. BOM
             //  - obj.prop          //읽기
             //  - obj.prop = "값"   //쓰기
-            //2. DOM
+            // 2. DOM
             //  - obj.getAttribute("prop")          //읽기
             //  - obj.setAttribute("prop", "값")    //쓰기
-            //3. jQuery
+            // 3. jQuery
             //  - obj.attr("prop")          //읽기
             //  - obj.attr("prop", "값")    //쓰기
 
@@ -63,7 +62,7 @@
             //     title: "이름 입력"
             // });
 
-            //$(".box").attr("title", "상자");
+            // $(".box").attr("title", "상자");
 
 
             // $("#box2")
@@ -76,16 +75,16 @@
 
 
             //태그 조작 > CSS 조작
-            //1. css()
-            //2. addClass(), removeClass(), hasClass(), toggleClass()
-            //3. Box Model > width(), height(), innerWidth(), outerWidth()
+            // 1. css()
+            // 2. addClass(), removeClass(), hasClass(), toggleClass()
+            // 3. Box Model > width(), height(), innerWidth(), outerWidth()
 
 
             //동적으로 이미지 추가하기
 
-            //document.getElementById("list").innerHTML += "<img src='../images/catty01.png'>";
+            document.getElementById("list").innerHTML += "<img src='../images/catty01.png'>";
 
-            //$("#list").html($("#list").html() + "<img src='../images/catty01.png'>");
+            $("#list").html($("#list").html() + "<img src='../images/catty01.png'>");
 
             //템플릿 리터럴, Template Literal
             // - ` : 역홑따옴표, back-quote, back-tick
@@ -134,29 +133,29 @@
             //                     })
             //                 });
 
-            var c = $(`<img src='../images/catty0${n}.png'>`)
-                            .css({
-                                opacity: .5,
-                                "box-shadow": "2px 2px 2px gray"
-                            })
-                            .on({
-                                mouseenter: function() {
-                                    $(this).css({
-                                        opacity: 1,
-                                        "box-shadow": "7px 7px 2px gray"
-                                    });
-                                },
-                                mouseleave: function() {
-                                    $(this).css({
-                                        opacity: .5,
-                                        "box-shadow": "2px 2px 2px gray"
-                                    });
-                                }
-                            });
+            // var c = $(`<img src='../images/catty0${n}.png'>`)
+            //                 .css({
+            //                     opacity: .5,
+            //                     "box-shadow": "2px 2px 2px gray"
+            //                 })
+            //                 .on({
+            //                     mouseenter: function() {
+            //                         $(this).css({
+            //                             opacity: 1,
+            //                             "box-shadow": "7px 7px 2px gray"
+            //                         });
+            //                     },
+            //                     mouseleave: function() {
+            //                         $(this).css({
+            //                             opacity: .5,
+            //                             "box-shadow": "2px 2px 2px gray"
+            //                         });
+            //                     }
+            //                 });
 
-            $("#list").append(c);
+            // $("#list").append(c);
 
-            n++;
+            // n++;
 
 
         });
