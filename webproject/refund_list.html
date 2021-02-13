@@ -36,30 +36,34 @@
         }
 
 
-
+        /* 폰트 설정 */
         div, li {
             font-family: 'NanumBarunGothic'
         }   
 
 
-
+        /* 페이지 전체 사이즈 설정 */
 
         body {
             width: 1150px;
             margin: auto;
         }
 
+
+        /* 헤더 */
+
         .top_header {
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
 
-        .top_header .right_header_menu > .user_menu {
-            border: 1px solid black;
+        .top_header .right_header_menu > .user_menu > li > a {
+            /* border: 1px solid black; */
+            color: #333;
         }
 
         .top_header .user_menu > li {
             list-style: none;
-            padding: 10px 3px;
+            padding: 10px 1px;
             display: inline-block;
             font-size: 13px;
         }
@@ -72,18 +76,101 @@
 
         .top_header .logo {
             position: relative;
-            left: 120px;
+            left: 150px;
             top: 20px;
         }
 
         .top_header .searcharea {
             position: absolute;
-            left: 400px;
+            left: 430px;
             top: 80px;
         }
 
         .top_header .search_input {
             display: inline-block;
+        }
+
+        .searcharea .main_input {
+            border: 1px solid #1D998A;
+            color: #999;
+        }
+
+
+        .searcharea .btn_search {
+            background-color: #12887A;
+            color: white;
+        }
+
+
+        .top_header .top_words {
+            /* border: 1px solid black; */
+            display: inline-block;
+            position: absolute;
+            left: 930px;
+            top: 85px;
+        }
+
+
+
+        /* 상단 네비게이션 바 */
+
+        .navigation_bar {
+            /* border: 1px solid black; */
+        }
+        
+
+        /* 국내도서, 해외도서 하위메뉴 숨기기 */
+        .parent li {
+            display: none;
+        }
+
+        .parent:hover li {
+            display: block;
+        }
+
+        .navigation_bar .main_menu .item_1 ul {
+            /* border: 1px solid black; */
+            list-style: none;
+            width: 130px;
+        }
+
+        .navigation_bar .main_menu .item_1 ul li, .navigation_bar .main_menu .item_2 ul li {
+            /* border: 1px solid black; */
+            background-color: #DDE7E6;
+            position: relative;
+            top: 12px;
+            left: -43px;
+            width: 140px;
+        }
+
+        .navigation_bar .main_menu .item_1 ul li a, .navigation_bar .main_menu .item_2 ul li a {
+            color: #333;
+        }
+
+        .navigation_bar {
+            height: 45px;
+            position: relative;
+            top: 25px;
+            left: 0px;
+            text-align: center;
+            background-color: #12887A;
+        }
+
+        .main_menu > li {
+            display: inline-block;
+            /* border: 1px black solid; */
+            width: 150px;
+            text-align: center;
+            padding: 10px;
+            margin: 0px -2px;
+            position: relative;
+            left: -20px;
+            
+        }
+
+        .navigation_bar .top_menu {
+            color: white;
+            font-size: 1.2em;
         }
 
 
@@ -115,7 +202,7 @@
         <div class="searcharea">
             <div class="search_input">
                 <input type="text" class="main_input" name="searchKeyword" id="searchKeyword" value="검색어를 입력하세요." style="width: 400px;
-                height: 30px;"/>
+                height: 33px;"/>
             </div>
             <input type="button" class="btn btn_search" value="검색"/>
         </div>
@@ -127,16 +214,15 @@
     </div>
             
 
-    <!-- //플로팅 GNB -->
-    <!-- s:.navigation_bar (상단 네비게이션)-->
+    <!-- .navigation_bar (상단 네비게이션)-->
     <div class="navigation_bar">
-
+    
         <!-- 주요메뉴 -->
-        <ul class="gnb_main add_1">
-            <li><a href="">베스트도서</a></li>
-            <li><a href="">신간도서</a></li>
+        <ul class="main_menu">
+            <li><a href="" class="top_menu">베스트도서</a></li>
+            <li><a href="" class="top_menu">신간도서</a></li>
             <li class="item_1 parent">
-                <div class="item_1"><a href="" class="text">국내도서<span></span></a></div>
+                <div class="item_1"><a href="" class="top_menu">국내도서<span></span></a></div>
                 <ul>
                     <li><a href="">소설</a></li>
                     <li><a href="">시/에세이</a></li>
@@ -154,10 +240,9 @@
                     <li><a href="">취업/수험서</a></li>
                     <li><a href="">외국어</a></li>
                 </ul>
-
             </li>
             <li class="item_2 parent">
-                <div class="item_2"><a href="" class="text">해외도서<span></span></a></div>
+                <div class="item_2"><a href=""  class="top_menu">해외도서<span></span></a></div>
                 <ul>
                     <li><a href="">서양도서</a></li>
                     <li><a href="">어린이/청소년</a></li>
@@ -165,196 +250,199 @@
                     <li><a href="">기타언어권</a></li>
                 </ul>
             </li>
-            <li><a href="">eBook</a></li>
-            <li><a href="">중고게시판</a></li>
+            <li><a href="" class="top_menu">eBook</a></li>
+            <li><a href="" class="top_menu">중고게시판</a></li>
         </ul>
         <!-- //주요메뉴 -->
-
-
-        <div id="container">
-            <!-- 경로 표시 -->
-
-            <p class="path">홈 <img src="http://image.kyobobook.co.kr/ink/images/common/icon_arrow.gif" alt=">" /> <span> 마이페이지 <img src='http://image.kyobobook.co.kr/ink/images/common/icon_arrow.gif' alt='>' /> 취소/교환/반품 조회</span></p>
-            <!-- // 경로 표시 -->
-
-            <div class="content_middle">
-                <!-- 사이드메뉴 -->
-
-                <div id="myroom_snb">
-                    <h2 class="cscenter_h2"><a href="">마이페이지</a></h2>
-
-
-                    <!-- 고객 공통 컨텐츠 -->
-                    <div class="out_myroom_gradearea">
-                        <div class="user_section">
-                            <div class="greeting">어서오십시오.</div>
-                            <div class="user_name">테스트님</div>
-                            <div class="tit"><a href="">포인트</a></div>
-                            <div class="info"><a href=""><strong>5,500</strong></a>원<b class="적립">P</b></div>
-                        </div>
+    </div>
+    
+    <!-- container -->
+    <div id="container">
+        <!-- 경로 표시 -->
+    
+        <p class="path">홈 <img src="http://image.kyobobook.co.kr/ink/images/common/icon_arrow.gif" alt=">" /> <span> 마이페이지
+                <img src='http://image.kyobobook.co.kr/ink/images/common/icon_arrow.gif' alt='>' /> 취소/교환/반품 조회</span></p>
+        <!-- // 경로 표시 -->
+    
+        <div class="content_middle">
+            <!-- 사이드메뉴 -->
+    
+            <div id="myroom_snb">
+                <h2 class="cscenter_h2"><a href="">마이페이지</a></h2>
+    
+    
+                <!-- 고객 공통 컨텐츠 -->
+                <div class="out_myroom_gradearea">
+                    <div class="user_section">
+                        <div class="greeting">어서오십시오.</div>
+                        <div class="user_name">테스트님</div>
+                        <div class="tit"><a href="">포인트</a></div>
+                        <div class="info"><a href=""><strong>5,500</strong></a>원<b class="적립">P</b></div>
                     </div>
-
-
-
-                    <ul class="cscenter_snb3">
-                        <li>
-                            <strong>나의 주문내역</strong>
-                            <ul>
-                                <li><a href="">주문/배송/결제</a></li>
-                                <li><a href="">교환/환불/취소</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>나의 정보</strong>
-                            <ul>
-                                <li><a href="">회원정보 조회/수정</a></li>
-                                <li><a href="">비밀번호 수정</a></li>
-                                <li><a href="">회원탈퇴</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>기타</strong>
-                            <ul>
-                                <li><a href="">장바구니</a></li>
-                                <li><a href="">중고게시판</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>고객센터</strong>
-                            <ul>
-                                <li><a href="">자주 묻는 FAQ</a></li>
-                                <li><a href="">1:1 고객센터</a></li>
-                            </ul>
-                        </li>
+                </div>
+    
+    
+    
+                <ul class="cscenter_snb3">
+                    <li>
+                        <strong>나의 주문내역</strong>
+                        <ul>
+                            <li><a href="">주문/배송/결제</a></li>
+                            <li><a href="">교환/환불/취소</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>나의 정보</strong>
+                        <ul>
+                            <li><a href="">회원정보 조회/수정</a></li>
+                            <li><a href="">비밀번호 수정</a></li>
+                            <li><a href="">회원탈퇴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>기타</strong>
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li><a href="">중고게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>고객센터</strong>
+                        <ul>
+                            <li><a href="">자주 묻는 FAQ</a></li>
+                            <li><a href="">1:1 고객센터</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    
+        <div class="myroom_contents">
+            <div id="myroom_contents">
+    
+                <!--// 고객 공통 컨텐츠 -->
+                <h2 class="bul_green20"><span>취소/교환/반품 조회</span></h2>
+                <div class="order_tracking_section">
+    
+                    <ul class="process_list_st">
+                        <li class="cell1">교환신청 <span>(0)</span></li>
+                        <li class="cell2">교환접수중 <span>(0)</span></li>
+                        <li class="cell3">교환완료<span>(0)</span></li>
+    
+                        <li class="cell4">반품신청 <span>(0)</span></li>
+                        <li class="cell5">반품회수중 <span>(0)</span></li>
+                        <li class="cell6">반품완료<span>(0)</span></li>
                     </ul>
                 </div>
-
-               
-                <div id="myroom_contents">
-
-                    <!--// 고객 공통 컨텐츠 -->
-                    <h2 class="bul_green20"><span>취소/교환/반품 조회</span></h2>
-                    <div class="order_tracking_section">
-
-                        <ul class="process_list_st">
-                            <li class="cell1">교환신청 <span>(0)</span></li>
-                            <li class="cell2">교환접수중 <span>(0)</span></li>
-                            <li class="cell3">교환완료<span>(0)</span></li>
-
-                            <li class="cell4">반품신청 <span>(0)</span></li>
-                            <li class="cell5">반품회수중 <span>(0)</span></li>
-                            <li class="cell6">반품완료<span>(0)</span></li>
-                        </ul>
+    
+                <form name="orderListForm" id="orderListForm" method="post">
+                    <table class="table_myroom td_font_12 margin_top20" summary="기간조회, 상품조회 테이블 입니다.">
+                        <colgroup>
+                            <col width="14%" />
+                            <col width="*" />
+                            <col width="120" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="first border_style" scope="row">기간조회</th>
+                                <td class="border_style">
+                                    <span class="sort_option btn_number narrow">
+                                        <!-- Do not modify ID of these elements -->
+                                        <a id="period_1week" href="">1주일</a>
+                                        <a id="period_1month" href="">1개월</a>
+                                        <a id="period_3month" href="">3개월</a>
+                                        <a id="period_6month" href="">6개월</a>
+                                        <a id="period_this_month" href=""></a>
+                                        <a id="period_last_month" href=""></a>
+                                        <a id="period_month_before_last" href=""></a>
+                                    </span>
+    
+                                    <input type="text" class="input_style datepicker from" period="period2" id="strDate"
+                                        name="strDate" style="width:70px;" value="2021-01-14" title="시작일"
+                                        readonly="readonly" />
+                                    ~
+                                    <input type="text" class="input_style datepicker to" period="period2" id="endDate"
+                                        name="endDate" style="width:70px;" value="2021-02-13" title="종료일"
+                                        readonly="readonly" />
+                                </td>
+                                <td rowspan="2" class="border_none">
+                                    <a href="">조회</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="first border_style02" scope="row">상품조회</th>
+                                <td class="align_left02">
+                                    <input type="text" id="bookName" name="bookName" class="input_style"
+                                        style="width:490px;" value="상품명을 입력하세요" title="상품조회" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <!-- 주문내역시작 -->
+                    <table class="table_myroom td_font_12 margin_top5">
+                        <caption>주문 내역</caption>
+                        <colgroup>
+                            <col width="6%" />
+                            <col width="10%" />
+                            <col width="12%" />
+                            <col width="70" />
+                            <col />
+                            <col width="11%" />
+                            <col width="11%" />
+                            <col width="9%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="first" scope="col">구분</th>
+                                <th scope="col">주문번호</th>
+                                <th scope="col">접수일자</th>
+                                <th scope="col" colspan="2">상품정보</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">선택</th>
+                            </tr>
+    
+                            <tr>
+                                <td class="first none_data" colspan="6">최근 취소/교환/반품 목록이 없습니다.</td>
+                            </tr>
+    
+                        </tbody>
+                    </table>
+    
+                    <!-- 주문내역종료 -->
+    
+    
+                    <!-- 페이징시작 -->
+                    <div class="paging_num_my">
+                        <input type="button" value="<">
+                        <input type="button" value="1">
+                        <input type="button" value="2">
+                        <input type="button" value="3">
+                        <input type="button" value=">">
                     </div>
-
-                    <form name="orderListForm" id="orderListForm" method="post">
-                        <table class="table_myroom td_font_12 margin_top20" summary="기간조회, 상품조회 테이블 입니다.">
-                            <colgroup>
-                                <col width="14%" />
-                                <col width="*" />
-                                <col width="120" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th class="first border_style" scope="row">기간조회</th>
-                                    <td class="border_style">
-                                        <span class="sort_option btn_number narrow">
-                                            <!-- Do not modify ID of these elements -->
-                                            <a id="period_1week" href="">1주일</a>
-                                            <a id="period_1month" href="">1개월</a>
-                                            <a id="period_3month" href="">3개월</a>
-                                            <a id="period_6month" href="">6개월</a>
-                                            <a id="period_this_month" href=""></a>
-                                            <a id="period_last_month" href=""></a>
-                                            <a id="period_month_before_last" href=""></a>
-                                        </span>
-
-                                        <input type="text" class="input_style datepicker from" period="period2"
-                                            id="strDate" name="strDate" style="width:70px;" value="2021-01-14"
-                                            title="시작일" readonly="readonly" />
-                                        ~
-                                        <input type="text" class="input_style datepicker to" period="period2"
-                                            id="endDate" name="endDate" style="width:70px;" value="2021-02-13"
-                                            title="종료일" readonly="readonly" />
-                                    </td>
-                                    <td rowspan="2" class="border_none">
-                                        <a href="">조회</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="first border_style02" scope="row">상품조회</th>
-                                    <td class="align_left02">
-                                        <input type="text" id="bookName" name="bookName" class="input_style"
-                                            style="width:490px;" value="상품명을 입력하세요" title="상품조회"/>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- 주문내역시작 -->
-                        <table class="table_myroom td_font_12 margin_top5">
-                            <caption>주문 내역</caption>
-                            <colgroup>
-                                <col width="6%" />
-                                <col width="10%" />
-                                <col width="12%" />
-                                <col width="70" />
-                                <col />
-                                <col width="11%" />
-                                <col width="11%" />
-                                <col width="9%" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th class="first" scope="col">구분</th>
-                                    <th scope="col">주문번호</th>
-                                    <th scope="col">접수일자</th>
-                                    <th scope="col" colspan="2">상품정보</th>
-                                    <th scope="col">수량</th>
-                                    <th scope="col">상태</th>
-                                    <th scope="col">선택</th>
-                                </tr>
-
-                                <tr>
-                                    <td class="first none_data" colspan="6">최근 취소/교환/반품 목록이 없습니다.</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-                        <!-- 주문내역종료 -->
-
-
-                        <!-- 페이징시작 -->
-                        <div class="paging_num_my">
-                            <input type="button" value="<">
-                            <input type="button" value="1">
-                            <input type="button" value="2">
-                            <input type="button" value="3">
-                            <input type="button" value=">">
-                        </div>
-                        <!-- 페이징시작 -->
-
-                    </form>
-
-                    <div class="box_info_my margin_top30">
-                        <h3>안내사항</h3>
-                        <ul>
-                            <li>교환신청은 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내 가능합니다.</li>
-                            <li>변심반품의 경우 수령 후 7일 이내, 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내 가능합니다.</li>
-                            <li>오픈마켓, 기프트, 중고장터, 해외배송주문, 바로드림주문건은 <span>[1:1 상담]</span>으로 문의 바랍니다. <a
-                                    href="">1:1 상담 문의</a></li>
-                            <li>반품처리 절차 : 반품신청 > 접수 > 반품회수 > 회수완료 > 반품완료</li>
-                            <li>교환처리 절차 : 교환신청 > 접수 > 처리중 > 교환완료</li>
-                            <li>반품/교환신청건은 접수 이전 상태에서 신청취소가 가능합니다.</li>
-                        </ul>
-                    </div>
+                    <!-- 페이징시작 -->
+    
+                </form>
+    
+                <div class="box_info_my margin_top30">
+                    <h3>안내사항</h3>
+                    <ul>
+                        <li>교환신청은 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내 가능합니다.</li>
+                        <li>변심반품의 경우 수령 후 7일 이내, 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내 가능합니다.</li>
+                        <li>오픈마켓, 기프트, 중고장터, 해외배송주문, 바로드림주문건은 <span>[1:1 상담]</span>으로 문의 바랍니다. <a href="">1:1 상담 문의</a></li>
+                        <li>반품처리 절차 : 반품신청 > 접수 > 반품회수 > 회수완료 > 반품완료</li>
+                        <li>교환처리 절차 : 교환신청 > 접수 > 처리중 > 교환완료</li>
+                        <li>반품/교환신청건은 접수 이전 상태에서 신청취소가 가능합니다.</li>
+                    </ul>
                 </div>
-                <!-- // contents -->
             </div>
-            <!-- // Contents_middle -->
+            <!-- // contents -->
         </div>
-        <!-- // Container -->
+        <!-- // Contents_middle -->
+    </div>
+    <!-- // Container -->
     </div>
 
 
@@ -363,28 +451,28 @@
     <div id="footer">
         <div class="footer_con">
             <ul class="member_area">
-                    <li><a href="">회사소개</a></li>
-                    <li><a href="">고객센터</a></li>
-                    <li><a href="">청약철회</a></li>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">개인정보처리방침</a></li>
-                    <li><a href="">광고문의</a></li>
+                <li><a href="">회사소개</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">청약철회</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">광고문의</a></li>
             </ul>
+        </div>
+    
+        <div class="logo_area">
+            <img src="../imgs/bookjuck_logo.png" style="width: 100px;" alt="북적북적" />
+        </div>
+        <div class="click_footer">
+            <address>
+                ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 박영규<br />
+                사업자등록번호 : 102-81-11670<br />
+                <strong class="big">대표전화 : 1544-1900 (발신자 부담전화)</strong> &nbsp; 팩스 : 0502-987-5711 (지역번호공통)<br />
+                서울특별시 통신판매업신고번호 : 제 653호
+                <div class="copy">COPYRIGHT(C) <strong>BOOKJUCK BOOKJUCK</strong> ALL RIGHTS RESERVED.</div>
+            </address>
+        </div>
     </div>
-
-    <div class="logo_area">
-        <img src="../imgs/bookjuck_logo.png" style="width: 100px;" alt="북적북적"/>
-    </div>
-    <div class="click_footer">
-        <address>
-            ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 박영규<br />
-            사업자등록번호 : 102-81-11670<br />
-            <strong class="big">대표전화 : 1544-1900 (발신자 부담전화)</strong>  &nbsp;  팩스 : 0502-987-5711 (지역번호공통)<br />
-            서울특별시 통신판매업신고번호 : 제 653호 
-            <div class="copy">COPYRIGHT(C) <strong>BOOKJUCK BOOKJUCK</strong> ALL RIGHTS RESERVED.</div>
-        </address>
-    </div>
-</div>
 
 
 </body>
