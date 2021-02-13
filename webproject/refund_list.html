@@ -1,28 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>취소/교환/환불내역 조회 - 북적북적</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- CSS -->
+    <style>
+
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'RIDIBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 400;
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+        }
+
+
+
+        div, li {
+            font-family: 'NanumBarunGothic'
+        }   
+
+
+
+
+        body {
+            width: 1150px;
+            margin: auto;
+        }
+
+        .top_header {
+            border: 1px solid black;
+        }
+
+        .top_header .right_header_menu > .user_menu {
+            border: 1px solid black;
+        }
+
+        .top_header .user_menu > li {
+            list-style: none;
+            padding: 10px 3px;
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        .top_header .user_menu {
+            position: absolute;
+            left: 750px;
+            top: 0px;
+        }
+
+        .top_header .logo {
+            position: relative;
+            left: 120px;
+            top: 20px;
+        }
+
+        .top_header .searcharea {
+            position: absolute;
+            left: 400px;
+            top: 80px;
+        }
+
+        .top_header .search_input {
+            display: inline-block;
+        }
+
+
+    </style>
+
 </head>
 
 <body>
 
-    <!-- 플로팅 GNB (아래로 스크롤시 노출) -->
-    <div class="sticky_header">
-        <div class="sticky_inner">
-            <div class="home"><a href="">북적북적 홈</a></div>
+    <!-- top_header -->
+    <div class="top_header">
+    
+        <!-- 우측 상단 메뉴 -->
+        <div class="right_header_menu">
             <ul class="user_menu">
+                <li class="home"><a href="">북적북적 홈</a></li>
+                <li class="item_0"><a href="">로그아웃</a></li>
                 <li class="item_1"><a href="">마이페이지</a></li>
                 <li class="item_2"><a href="">장바구니</a></li>
                 <li class="item_3"><a href="">주문배송</a></li>
                 <li class="item_4"><a href="">고객센터</a></li>
             </ul>
-
         </div>
+
+        <!-- 기본 로고 -->
+        <h1 class="logo"><a href=""><img src="../imgs/logo_only_title.png" alt="북적북적" style="width: 200px" ; /></a></h1>
+        
+        <!-- searcharea -->
+        <div class="searcharea">
+            <div class="search_input">
+                <input type="text" class="main_input" name="searchKeyword" id="searchKeyword" value="검색어를 입력하세요." style="width: 400px;
+                height: 30px;"/>
+            </div>
+            <input type="button" class="btn btn_search" value="검색"/>
+        </div>
+
+        <div class="top_words">
+            실시간 검색어
+        </div>
+
     </div>
+            
 
     <!-- //플로팅 GNB -->
     <!-- s:.navigation_bar (상단 네비게이션)-->
@@ -254,10 +357,34 @@
         <!-- // Container -->
     </div>
 
+
+
     <!-- footer -->
-
-
+    <div id="footer">
+        <div class="footer_con">
+            <ul class="member_area">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">청약철회</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">광고문의</a></li>
+            </ul>
     </div>
+
+    <div class="logo_area">
+        <img src="../imgs/bookjuck_logo.png" style="width: 100px;" alt="북적북적"/>
+    </div>
+    <div class="click_footer">
+        <address>
+            ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 박영규<br />
+            사업자등록번호 : 102-81-11670<br />
+            <strong class="big">대표전화 : 1544-1900 (발신자 부담전화)</strong>  &nbsp;  팩스 : 0502-987-5711 (지역번호공통)<br />
+            서울특별시 통신판매업신고번호 : 제 653호 
+            <div class="copy">COPYRIGHT(C) <strong>BOOKJUCK BOOKJUCK</strong> ALL RIGHTS RESERVED.</div>
+        </address>
+    </div>
+</div>
 
 
 </body>
