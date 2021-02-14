@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>취소/교환/환불내역 조회 - 북적북적</title>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/bootstrap.js"></script>
     
-    <!-- refund_list.css -->
-    <link rel="stylesheet" href="css/refund_list.css">
+
+    <link rel="stylesheet" href="css/refund_list_ver2.css">
+
 
 </head>
 
@@ -58,8 +60,9 @@
         <ul class="main_menu">
             <li><a href="" class="top_menu">베스트도서</a></li>
             <li><a href="" class="top_menu">신간도서</a></li>
-            <li><a href="" class="top_menu parent">국내도서</a>
-                <ul id="list1" >
+            <li class="item_1 parent">
+                <div class="item_1"><a href="" class="top_menu">국내도서<span></span></a></div>
+                <ul>
                     <li><a href="">소설</a></li>
                     <li><a href="">시/에세이</a></li>
                     <li><a href="">경제/경영</a></li>
@@ -77,8 +80,9 @@
                     <li><a href="">외국어</a></li>
                 </ul>
             </li>
-            <li><a href="" class="top_menu parent">해외도서</a>
-                <ul id="list2" >
+            <li class="item_2 parent">
+                <div class="item_2"><a href=""  class="top_menu">해외도서<span></span></a></div>
+                <ul>
                     <li><a href="">서양도서</a></li>
                     <li><a href="">어린이/청소년</a></li>
                     <li><a href="">일본도서</a></li>
@@ -87,7 +91,6 @@
             </li>
             <li><a href="" class="top_menu">eBook</a></li>
             <li><a href="" class="top_menu">중고게시판</a></li>
-            <li style="clear: both;"></li>
         </ul>
         <!-- //주요메뉴 -->
     </div>
@@ -112,13 +115,12 @@
                     <div class="user_section">
                         <div class="greeting">어서오십시오.</div>
                         <div class="user_name">테스트님</div>
-                        <div class="point"><a href="">포인트</a></div>
-                        <div class="info"><a href=""><strong>5,500</strong></a>원<b class="적립">P</b></div>
+                        <div class="fpoint"><a href="">포인트 <strong>5,500</strong></a><b class="적립">P</b></div>
                     </div>
                 </div>
     
     
-                <ul class="cscenter_snb3">
+                <ul class="cscenter_snb2">
                     <li>
                         <strong>나의 주문내역</strong>
                         <ul>
@@ -201,7 +203,7 @@
                                         readonly="readonly" />
                                 </td>
                                 <td rowspan="2" class="border_none">
-                                    <a href="">조회</a>
+                                    <input type="button" class="btn" value="조회">
                                 </td>
                             </tr>
                             <tr>
@@ -250,11 +252,11 @@
     
                     <!-- 페이징시작 -->
                     <div class="paging_num_my">
-                        <input type="button" value="<">
-                        <input type="button" value="1">
-                        <input type="button" value="2">
-                        <input type="button" value="3">
-                        <input type="button" value=">">
+                        <input type="button" class="btn" value="<">
+                        <input type="button" class="btn" value="1">
+                        <input type="button" class="btn" value="2">
+                        <input type="button" class="btn" value="3">
+                        <input type="button" class="btn" value=">">
                     </div>
                     <!-- 페이징시작 -->
     
@@ -285,12 +287,12 @@
     <div id="footer">
         <div class="footer_con">
             <ul class="member_area">
-                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">회사소개</a></li>
-                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">고객센터</a></li>
-                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">청약철회</a></li>
-                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">이용약관</a></li>
-                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">개인정보처리방침</a></li>
-                <li><a href="" style="color: white;"">광고문의</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;">회사소개</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;">고객센터</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;">청약철회</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;">이용약관</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;">개인정보처리방침</a></li>
+                <li><a href="" style="color: white;">광고문의</a></li>
             </ul>
         </div>
     
@@ -299,10 +301,10 @@
         </div>
         <div class="click_footer">
             <address>
-                ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 김다은<br />
+                ㈜ 북적북적 &nbsp; 서울시 강남구 역삼동 한독빌딩 &nbsp; 대표이사 : 웹사조<br />
                 사업자등록번호 : 102-81-11670<br />
-                <strong class="big">대표전화 : 1544-1900 (발신자 부담전화)</strong> &nbsp; 팩스 : 0502-987-5711 (지역번호공통)<br />
-                서울특별시 통신판매업신고번호 : 제 653호
+                <strong class="big">대표전화 : 1544 - 0000 (발신자 부담전화)</strong> &nbsp; 팩스 : 0000-000-0000 (지역번호공통)<br />
+                서울특별시 통신판매업신고번호 : 제 000호
                 <div class="copy">COPYRIGHT(C) <strong>BOOKJUCK BOOKJUCK</strong> ALL RIGHTS RESERVED.</div>
             </address>
         </div>
