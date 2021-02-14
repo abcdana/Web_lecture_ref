@@ -53,13 +53,14 @@
         /* 헤더 */
 
         .top_header {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             width: 1150px;
             margin: auto;
+            
         }
 
         .top_header > .right_header_menu > .user_menu {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             width: 400px;
             margin: auto;
             position: relative;
@@ -119,11 +120,14 @@
 
 
         /* 상단 네비게이션 바 */
-
         .navigation_bar {
-            /* border: 1px solid black; */
+            height: 45px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            background-color: #12887A;
         }
-        
 
         /* 국내도서, 해외도서 하위메뉴 숨기기 */
         .parent li {
@@ -140,27 +144,29 @@
             width: 130px;
         }
 
+
         .navigation_bar .main_menu .item_1 ul li, .navigation_bar .main_menu .item_2 ul li {
-            /* border: 1px solid black; */
-            background-color: #DDE7E6;
+            background-color: #ebf5f4;
             position: relative;
             top: 12px;
-            left: -43px;
-            width: 140px;
+            left: -50px;
+            width: 150px;
+        }
+
+        .navigation_bar .main_menu .item_1 ul li, .navigation_bar .main_menu .item_2 ul li {
+            /* border: 1px solid black; */
+            padding: 5px 0px;
         }
 
         .navigation_bar .main_menu .item_1 ul li a, .navigation_bar .main_menu .item_2 ul li a {
             color: #333;
+            font-size: 1.1em;
         }
 
-        .navigation_bar {
-            height: 45px;
-            position: relative;
-            top: 25px;
-            left: 0px;
-            text-align: center;
-            background-color: #12887A;
+        .navigation_bar .main_menu .item_1 ul li:hover, .navigation_bar .main_menu .item_2 ul li:hover {
+            background-color: #d3e2e1;
         }
+
 
         .main_menu > li {
             display: inline-block;
@@ -171,14 +177,86 @@
             margin: 0px -2px;
             position: relative;
             left: -20px;
-            
         }
 
         .navigation_bar .top_menu {
-            color: black;
+            color: #EEE;
             font-size: 1.2em;
+            font-weight: bold;
         }
 
+
+
+        /* 마이페이지 */
+        .navigation_bar_left {
+            /* border: 1px solid black; */
+            display: inline-block;
+            width: 200px;
+            height: 450px;
+            background-color: #ebf5f4;
+        }
+
+        #container .path {
+            border-bottom: 1px solid #999;
+            /* display: inline-block; */
+            position: relative;
+            top: 5px;
+        }
+
+
+        /* Contents _ 취소/교환/반품 조회 */
+
+        #container .mypage_contents {
+            /* border: 1px solid black; */
+            width: 940px;
+            position: relative;
+            top: -450px;
+            left: 210px;
+        }
+
+
+        /* footer */
+        #footer {
+            /* border: 1px solid black; */
+            background-color: #eee;
+        }
+
+        #footer .footer_con {
+            /* border: 1px solid black; */
+            background-color: #666;
+        }
+
+        #footer .footer_con li {
+            /* border: 1px solid black; */
+            display: inline-block;
+            margin-top: 8px;
+            width: 140px;
+            text-align: center;
+        }
+
+        #footer .footer_con .member_area {
+            /* border: 1px solid black; */
+            display: inline-block;
+            position: relative;
+            top: 0px;
+            left: 100px;
+        }
+
+        #footer .logo_area {
+            /* border: 1px solid black; */
+            display: inline-block;
+            position: relative;
+            top: -20px;
+            left: 20px;
+        }
+
+        #footer .click_footer {
+            /* border: 1px solid black; */
+            display: inline-block;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
 
     </style>
 
@@ -270,23 +348,22 @@
                 <img src='http://image.kyobobook.co.kr/ink/images/common/icon_arrow.gif' alt='>' /> 취소/교환/반품 조회</span></p>
         <!-- // 경로 표시 -->
     
-        <div class="content_middle">
+        <div class="navigation_bar_left">
             <!-- 사이드메뉴 -->
     
-            <div id="myroom_snb">
+            <div id="mypage_snb">
                 <h2 class="cscenter_h2"><a href="">마이페이지</a></h2>
     
     
                 <!-- 고객 공통 컨텐츠 -->
-                <div class="out_myroom_gradearea">
+                <div class="out_mypage_gradearea">
                     <div class="user_section">
                         <div class="greeting">어서오십시오.</div>
                         <div class="user_name">테스트님</div>
-                        <div class="tit"><a href="">포인트</a></div>
+                        <div class="point"><a href="">포인트</a></div>
                         <div class="info"><a href=""><strong>5,500</strong></a>원<b class="적립">P</b></div>
                     </div>
                 </div>
-    
     
     
                 <ul class="cscenter_snb3">
@@ -320,14 +397,13 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
-    
+            </div>    
         </div>
+        <!--// 고객 공통 컨텐츠 -->
     
-        <div class="myroom_contents">
-            <div id="myroom_contents">
-    
-                <!--// 고객 공통 컨텐츠 -->
+
+        <div class="mypage_contents">
+            <div id="mypage_contents">
                 <h2 class="bul_green20"><span>취소/교환/반품 조회</span></h2>
                 <div class="order_tracking_section">
     
@@ -457,21 +533,21 @@
     <div id="footer">
         <div class="footer_con">
             <ul class="member_area">
-                <li><a href="">회사소개</a></li>
-                <li><a href="">고객센터</a></li>
-                <li><a href="">청약철회</a></li>
-                <li><a href="">이용약관</a></li>
-                <li><a href="">개인정보처리방침</a></li>
-                <li><a href="">광고문의</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">회사소개</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">고객센터</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">청약철회</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">이용약관</a></li>
+                <li style="border-right: 1px solid #EEE;"><a href="" style="color: white;"">개인정보처리방침</a></li>
+                <li><a href="" style="color: white;"">광고문의</a></li>
             </ul>
         </div>
     
         <div class="logo_area">
-            <img src="../imgs/bookjuck_logo.png" style="width: 100px;" alt="북적북적" />
+            <img src="../imgs/bookjuck_logo.png" style="width: 250px;" alt="북적북적" />
         </div>
         <div class="click_footer">
             <address>
-                ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 박영규<br />
+                ㈜ 북적북적 &nbsp; 서울시 종로구 종로 1 &nbsp; 대표이사 : 김다은<br />
                 사업자등록번호 : 102-81-11670<br />
                 <strong class="big">대표전화 : 1544-1900 (발신자 부담전화)</strong> &nbsp; 팩스 : 0502-987-5711 (지역번호공통)<br />
                 서울특별시 통신판매업신고번호 : 제 653호
